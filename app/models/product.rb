@@ -10,10 +10,12 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  image       :string
+#  category_id :integer
 #
 
 class Product < ApplicationRecord
   validates :title, presence: true
+  belongs_to :category
 
   mount_uploader :image, ImageUploader
 end

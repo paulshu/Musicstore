@@ -22,25 +22,31 @@ end
 
 # Initialize Product
 
-Product.create!(title: "QC-35",
-  description: "耳机",
-  price: 2800,
-  quantity: 5,
-  #image: open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
-  #可用于app/uploaders/image_uploader.rb 没有设置有图片格式的whitelist的时候，如有需将　`open` 改成　`MiniMagick::Image.open`
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
-  )
-
-Product.create!(title: "Nikon 尼康 1 J5+VR 相机",
-  description: "Nikon 尼康 1 J5+VR 10-100mm f/4-5.6 可换镜数码套机(黑色)",
-  price: 2499,
-  quantity: 6,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51r2sp28MoL.jpg")
-  )
-
-Product.create!(title: "Cherry Keyboard",
-  description: "G80-3000键盘",
-  price: 2800,
-  quantity: 5,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/41LN-bXtA7L._AC_UL320_SR320,320_.jpg")
-  )
+# Product.create!(title: "QC-35",
+#   description: "耳机",
+#   price: 2800,
+#   quantity: 5,
+#   #image: open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
+#   #可用于app/uploaders/image_uploader.rb 没有设置有图片格式的whitelist的时候，如有需将　`open` 改成　`MiniMagick::Image.open`
+#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
+#   )
+#
+# Product.create!(title: "Nikon 尼康 1 J5+VR 相机",
+#   description: "Nikon 尼康 1 J5+VR 10-100mm f/4-5.6 可换镜数码套机(黑色)",
+#   price: 2499,
+#   quantity: 6,
+#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51r2sp28MoL.jpg")
+#   )
+#
+# Product.create!(title: "Cherry Keyboard",
+#   description: "G80-3000键盘",
+#   price: 2800,
+#   quantity: 5,
+#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/41LN-bXtA7L._AC_UL320_SR320,320_.jpg")
+#   )
+# product categroy
+  Category.create(name: "管乐器")
+  Category.create(name: "弦乐器")
+  Category.create(name: "打击乐器")
+  Category.create(name: "键盘乐器")
+  Category.create(name: "电子乐器")

@@ -19,6 +19,13 @@ else
   puts "Admin 已经建立过了，脚本跳过该步骤。"
 end
 
+# product categroy
+  Category.create!(name: "键盘钢琴")
+  Category.create!(name: "吉他贝斯")
+  Category.create!(name: "录音设备")
+  Category.create!(name: "管弦乐器")
+  Category.create!(name: "打击乐器")
+  Category.create!(name: "民族乐器")
 
 # Initialize Product
 
@@ -134,11 +141,3 @@ Product.create!(
   quantity: 1000,
   image: MiniMagick::Image.open("https://images-cn-4.ssl-images-amazon.com/images/I/61CFUnYzWOL._SL800_.jpg")
 )
-
-# product categroy
-  Category.create!(name: "键盘钢琴")
-  Category.create!(name: "吉他贝斯")
-  Category.create!(name: "录音设备")
-  Category.create!(name: "管弦乐器")
-  Category.create!(name: "打击乐器")
-  Category.create!(name: "民族乐器")

@@ -183,8 +183,8 @@ Product.create!(
 
 
 # product categroy
-  Category.create!(name: "键盘、钢琴")
-  Category.create!(name: "吉他／贝斯")
+  Category.create!(name: "键盘钢琴")
+  Category.create!(name: "吉他贝斯")
   Category.create!(name: "录音设备")
   Category.create!(name: "管弦乐器")
   Category.create!(name: "打击乐器")

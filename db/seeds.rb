@@ -134,53 +134,6 @@ Product.create!(
   quantity: 1000,
   image: MiniMagick::Image.open("https://images-cn-4.ssl-images-amazon.com/images/I/61CFUnYzWOL._SL800_.jpg")
 )
-#
-# Product.create!(
-#   category_id: ,
-#   title: "",
-#   description: "",
-#   price: ,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("")
-# )
-#
-# Product.create!(
-#   category_id: ,
-#   title: "",
-#   description: "",
-#   price: ,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("")
-# )
-#
-# Product.create!(
-#   category_id: ,
-#   title: "",
-#   description: "",
-#   price: ,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("")
-# )
-#
-# Product.create!(
-#   category_id: ,
-#   title: "",
-#   description: "",
-#   price: ,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("")
-# )
-#
-#
-# Product.create!(
-#   category_id: ,
-#   title: "",
-#   description: "",
-#   price: ,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("")
-# )
-
 
 # product categroy
   Category.create!(name: "键盘钢琴")

@@ -77,17 +77,32 @@ end
 #   quantity: 1000,
 #   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg")
 # )
-#
-#
-# Product.create!(
-#   category_id: 3,
-#   title: "YAMAHA 雅马哈 UR44 USB声卡 音频接口",
-#   description: "同时兼具了高功能性和便携性的UR44, 是一款应用范围广泛的强大的音频/MIDI接口。4个话放，6个输入，4个输出，MIDI接口，集成DSP供电以及与iPad的连接功能都体现了它的高度灵活性。包装清单",
-#   price: 2480,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51qQZoTZwkL._SL1000_.jpg")
-# )
-#
+
+# product categroy
+  Category.create!(name: "键盘钢琴")
+  Category.create!(name: "吉他贝斯")
+  Category.create!(name: "录音设备")
+  Category.create!(name: "管弦乐器")
+  Category.create!(name: "打击乐器")
+  Category.create!(name: "民族乐器")
+
+# Initialize Product
+Product.create!(
+  id: 1, # 第二个商品id:2, Product_id:2, 以此类推
+  category_id: 3,
+  title: "YAMAHA 雅马哈 UR44 USB声卡 音频接口",
+  description: "同时兼具了高功能性和便携性的UR44, 是一款应用范围广泛的强大的音频/MIDI接口。4个话放，6个输入，4个输出，MIDI接口，集成DSP供电以及与iPad的连接功能都体现了它的高度灵活性。包装清单",
+  price: 2480,
+  quantity: 1000,
+  )
+# Initialize Product Photos
+# 先將照片上傳到iPic或其他位置
+  Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51qQZoTZwkL._SL1000_.jpg"))
+  Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/91poBD8C%2B1L._SL1500_.jpg"))
+  Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51a2z1WzvbL._SL800_.jpg"))
+  Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51JbuymzGZL._SL800_.jpg"))
+  Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61aI%2Bvkhj6L._SL800_.jpg"))
+# 上面的product_id与上面创建的商品一一对应，即每个商品id为1的加5张照片，第二个商品就应改为2.
 # Product.create!(
 #   category_id: 3,
 #   title: "Genelec 真力 8020CPM-5 二分频、双功放有源监听音箱(只装)",
@@ -134,11 +149,3 @@ end
 #   quantity: 1000,
 #   image: MiniMagick::Image.open("https://images-cn-4.ssl-images-amazon.com/images/I/61CFUnYzWOL._SL800_.jpg")
 # )
-
-# product categroy
-  Category.create!(name: "键盘钢琴")
-  Category.create!(name: "吉他贝斯")
-  Category.create!(name: "录音设备")
-  Category.create!(name: "管弦乐器")
-  Category.create!(name: "打击乐器")
-  Category.create!(name: "民族乐器")

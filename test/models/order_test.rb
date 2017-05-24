@@ -3,7 +3,7 @@
 # Table name: orders
 #
 #  id               :integer          not null, primary key
-#  total            :integer          default("0")
+#  total            :integer          default(0)
 #  user_id          :integer
 #  billing_name     :string
 #  billing_address  :string
@@ -12,7 +12,7 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  token            :string
-#  is_paid          :boolean          default("f")
+#  is_paid          :boolean          default(FALSE)
 #  payment_method   :string
 #  aasm_state       :string           default("order_placed")
 #

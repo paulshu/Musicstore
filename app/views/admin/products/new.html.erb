@@ -1,5 +1,5 @@
 <div class="col-md-8 col-md-offset-2">
-  <h2> New Product </h2>
+  <h2 class="text-center">Create a Product</h2>
 
   <%= simple_form_for [:admin, @product] do |f| %>
     <div class="group">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="group">
-      <%= f.input :description %>
+      <%= f.input :description, placeholder: "请输入产品详细描述" %>
     </div>
     <div class="group">
       <%= f.input :quantity %>
@@ -21,9 +21,11 @@
     </div>
 
     <div class="group">
-      <%= f.input :image, as: :file %>
+      <%#= f.input :image, as: :file %>
+      <%= f.label :image %><br>
+      <%= f.file_field :image, :multiple => true, name: "photos[image][]" %> ("请上传5张图片"）<br>
     </div>
 
-    <%= f.submit "Submit", data: {disable_with: "Submitting..."} %>
+    <%= f.submit "Submit", data: {disable_with: "Submitting..."}, class: "btn btn-default" %>
   <% end %>
 </div>

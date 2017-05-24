@@ -19,64 +19,17 @@ else
   puts "Admin 已经建立过了，脚本跳过该步骤。"
 end
 
+# product categroy
+  Category.create!(name: "键盘钢琴")
+  Category.create!(name: "吉他贝斯")
+  Category.create!(name: "录音设备")
+  Category.create!(name: "管弦乐器")
+  Category.create!(name: "打击乐器")
+  Category.create!(name: "民族乐器")
 
 # Initialize Product
 
-# Product.create!(
-#   category_id: 1,
-#   title: "YAMAHA 雅马哈 ARIUS系列YDP-143B电钢琴",
-#   description: "真实的声音，自然的触感，充满享受的演奏，融入了先进技术的高性价比数码钢琴。迷人的木质厢式设计和雅马哈传奇的钢琴制造工艺造就了数码钢琴的优良品质。",
-#   price: 5699,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51GZ0F3UlkL._SL800_.jpg")
-# )
-#
-#
-# Product.create!(
-#   category_id: 1,
-#   title: "XINGHAI 星海钢琴 XU-25FA 立式家用专业演奏钢琴125 黑色原声钢琴",
-#   description: "XINGHAI 星海 XU-25FA黑色立式钢琴原声钢琴出口德国125型",
-#   price: 19800,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61NUzzgRlOL._SL1000_.jpg")
-# )
-#
-#
-# Product.create!(
-#   category_id: 1,
-#   title: "Pearl River 珠江  新世纪立式钢琴 原声钢琴118F1黑色",
-#   description: "新世纪立式钢琴 原声钢琴118F1黑色",
-#   price: 11480,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61twT8%2B06wL._SL1300_.jpg")
-# )
-#
-# Product.create!(
-#   category_id: 2,
-#   title: "YAMAHA 雅马哈 FG800MS/WC 单板云杉民谣木吉他 带原装琴箱",
-#   description: "FG系列展现了雅马哈的优秀工艺。由挑选的木料制成，FG乐器拥有漂亮外观与音色，此款吉他是FG700系列的2016升级版",
-#   price: 1680,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51woxc6eqOL._SL1000_.jpg")
-# )
-#
-# Product.create!(
-#   category_id: 2,
-#   title: "IBANEZ 电吉他 GRG170DX#-CA",
-#   description: " 枫木琴颈；椴木琴身；中型品丝；Fat 10琴桥；STD-H1（双）琴颈拾音器；STD-S4（单）中拾音器；STD-H2（双）琴桥拾音器",
-#   price: 1170,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71-tRb57%2BML._SL1500_.jpg")
-# )
-#
-# Product.create!(
-#   category_id: 3,
-#   title: "PreSonus Eris E8 高解析度有源双功放监听音箱 （一对）",
-#   description: "PreSonus紧凑型两分频有源监听音箱Eris系列 E8，可以准确的传递出坚实的低频和清晰的高频，独特的可选择调整的声学空间设计为用户表达出了更加准确的监听环境。它还可以控制模仿不同的听音环境，使频率响应达到较大限度的平直，使之胜于其它同等价位监听音箱。",
-#   price: 4580,
-#   quantity: 1000,
-#   image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg")
-# )
+
 
 # product categroy
   Category.create!(name: "键盘钢琴")
@@ -103,6 +56,7 @@ Product.create!(
   Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51JbuymzGZL._SL800_.jpg"))
   Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61aI%2Bvkhj6L._SL800_.jpg"))
 # 上面的product_id与上面创建的商品一一对应，即每个商品id为1的加5张照片，第二个商品就应改为2.
+
 # Product.create!(
 #   category_id: 3,
 #   title: "Genelec 真力 8020CPM-5 二分频、双功放有源监听音箱(只装)",

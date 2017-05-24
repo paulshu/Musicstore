@@ -38,6 +38,18 @@ gem 'mini_magick'
 gem 'annotate'
 gem 'letter_opener', group: :development
 gem 'aasm'
+gem 'local_time'
+gem 'mailboxer'
+gem 'chosen-rails'
+gem 'paperclip', '~> 4.1'
+gem 'figaro'
+gem 'fog'
+gem 'jquery-turbolinks'
+gem "twemoji"
+gem 'bullet', group: 'development'
+gem 'rollbar'
+gem 'pry'
+gem 'faker'
 
 
 group :development, :test do

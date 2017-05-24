@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Initialize Admin User
-if User.find_by(email: "shu_18@163.com").nil?
+if User.find_by(email: "admin@123.com").nil?
   u = User.new
-  u.email = "shu_18@163.com"           # 可以改成自己的 email
+  u.email = "admin@123.com"           # 可以改成自己的 email
   u.password = "123456"                # 最少要六码
   u.password_confirmation = "123456"   # 最少要六码
   u.is_admin = true
@@ -21,18 +21,19 @@ end
 
 
 # product categroy
-  Category.create!(name: "键盘钢琴")
+  Category.create!(name: "键盘乐器")
   Category.create!(name: "吉他贝斯")
   Category.create!(name: "录音设备")
   Category.create!(name: "管弦乐器")
   Category.create!(name: "打击乐器")
   Category.create!(name: "民族乐器")
 
+
 # Initialize Product
 Product.create!(
   id: 1, # 第二个商品id:2, Product_id:2, 以此类推
   category_id: 3,
-  title: "YAMAHA 雅马哈 UR44 USB声卡 音频接口",
+  title: "YAMAHA  UR44 USB声卡 音频接口",
   description: "同时兼具了高功能性和便携性的UR44, 是一款应用范围广泛的强大的音频/MIDI接口。4个话放，6个输入，4个输出，MIDI接口，集成DSP供电以及与iPad的连接功能都体现了它的高度灵活性。包装清单",
   price: 2480,
   quantity: 1000,

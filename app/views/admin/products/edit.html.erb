@@ -21,8 +21,9 @@
     </div>
 
     <div class="group">
-      <%= f.input :image, as: :file %>
+      <%= f.label :image %><br>
+      <%= f.file_field :image, :multiple => true, name: "photos[image][]" %> ("请上传5张图片"）<br>
     </div>
-    <%= f.submit "Submit", data: {disable_with: "Submitting..."} %>
+    <%= f.submit "Submit", data: {disable_with: "Submitting...", class: "btn btn-default"} %>
   <% end %>
 </div>

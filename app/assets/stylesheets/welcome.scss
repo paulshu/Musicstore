@@ -2,4 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
-// /*字体颜色和背景颜色*/
+
+//@import 'base';
+//@import 'animate';
+
+/*字体颜色和背景颜色*/
+.lp-bg-gray {
+  background: #F4F3F3;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+.lp {
+	color: #4C585F;
+	background: #fff;
+	font-family:  'Open Sans','open_sans','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;
+	line-height: 1.5;
+	.container-fluid {
+		width: 1200px;
+	}
+	.title {
+		font-weight: normal;
+	}
+	.light {
+
+	}
+}

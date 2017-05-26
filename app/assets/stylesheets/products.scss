@@ -30,6 +30,7 @@
   img {
     width: 100%;
     height: 200px;
+  //  border-radius: 8px;
   }
 }
 .productList-lastItem {
@@ -37,6 +38,9 @@
 }
 .productList-item-name {
   color: #333;
+}
+.productList-item-price {
+  color: #D32048;
 }
 .productList-item-desc {
   color: #808080;

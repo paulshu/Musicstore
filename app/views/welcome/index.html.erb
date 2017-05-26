@@ -33,7 +33,7 @@
       <div class="productList-wrap w1200 bc">
       <ul class="productList clearfix pb20">
         <% Product.all.includes(:photos).each_with_index do |product, index| %>
-				    <% if index < 10 %>
+				    <% if index < 5 %>
             <%= render :partial => "product_item", locals: { product: product, index: index } %>
         <% end %>
         <% end %>

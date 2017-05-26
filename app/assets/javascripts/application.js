@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
+//= require autosize.min  
 //= require_tree .
 
 // 首页轮播

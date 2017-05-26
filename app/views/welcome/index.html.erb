@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-12 ">
  <div class="row box">
    <div class="box-inner col-md-6 col-md-offset-3">
       <h1 class="title">Music Store</h1>
@@ -12,36 +12,17 @@
   </div>
 </div>
 
+      <div class="lp">
+        <div class="lp-bg-gray">
+          <h3 class="title tc f22 pb50 text-center">热卖的声音</h3>
 
-<!-- 首页精选商品列表 -->
-  <div class="container all-product-box">
-    <div class="row">
-
-      <div class="container topspan">
-        <div class="row">
-          <div class="col-xs-6">
-            <h3 class="titspan">商品列表</h3>
-          </div>
-          <div class="col-xs-6">
-            <%= link_to("more >", products_path, class: "pull-right morespan") %>
-          </div>
-        </div>
-      </div>
-
-      <% @products.each do |product| %>
-        <div class="col-xs-6 col-md-3 text-center product-list-style">
-          <% link_to product_path(product) %>
-            <% if product.image.present? %>
-              <%= link_to image_tag(product.image.thumb.url, class: "product-list-style-img img-responsive center-block"), product_path(product) %>
-            <% else %>
-              <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "product-list-style-img img-responsive center-block"), product_path(product) %>
+          <ul class="productList clearfix">
+            <% Product.all.includes(:photos).each_with_index do |product, index| %>
+    				    <% if index < 10 %>
+                <%= render :partial => "product_item", locals: { product: product, index: index } %>
             <% end %>
-          <br>
-          <%= link_to(product.title, product_path(product)) %>
-          <br>
-          <strong>￥ <%= link_to(product.price, product_path(product)) %></strong></p>
-        </div>
-      <% end %>
-
+            <% end %>
+          </ul>
     </div>
   </div>
+</div>

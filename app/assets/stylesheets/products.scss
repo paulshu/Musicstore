@@ -79,3 +79,50 @@
 // 	border-radius: 50%;
 // 	color: #fff;
 // }
+
+//商品详细
+.intro-text {
+	width: 744px;
+	h3 {
+		margin-top: 100px;
+		line-height: 30px;
+    font-size: 30px;
+	}
+}
+
+.intro-text-desc {
+	margin-top: 10px;
+  font-size: 14px;
+}
+
+.intro-text-value {
+	height: 60px;
+	line-height: 60px;
+  line-height: 60px;
+}
+
+.intro-text-service {
+	height: 50px;
+	line-height: 50px;
+}
+
+.intro-text-btn {
+	display: block;
+	width: 178px;
+	height: 48px;
+	line-height: 45px;
+	border: 1px solid #d32048;
+	font-family: "Microsoft Yahei",simhei;
+	border-radius: 50px;
+	&.add-cart {
+		color: #fff;
+	}
+	&.btn-disabled {
+		background: #aaa;
+    border-color: #fff;
+	}
+}
+
+.intro-text-quantity span {
+	margin-top: 15px;
+}

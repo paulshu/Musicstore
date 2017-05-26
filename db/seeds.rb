@@ -105,6 +105,7 @@ Product.create!(
   description: "台湾 UMA 优玛 UKULELE(尤克里里)UK-03C 23寸",
   price: 350,
   quantity: 10001,
+
   # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81ietCRkerL._SL1500_.jpg")#,
   # details: "UK-03C 桃花心木<br>音点：ABS<br>弦线4弦：Aquila 意大利<br>参数详情<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/UK03S-20150921-4.jpg\">"
 )
@@ -122,6 +123,7 @@ Product.create!(
   description: "PreSonus紧凑型两分频有源监听音箱Eris系列 E8，可以准确的传递出坚实的低频和清晰的高频，独特的可选择调整的声学空间设计为用户表达出了更加准确的监听环境。它还可以控制模仿不同的听音环境，使频率响应达到较大限度的平直，使之胜于其它同等价位监听音箱。",
   price: 4580,
   quantity: 1002,
+
   # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg")#,
   # details: "130瓦AB类双功放<br>8英寸Kevlar™凯芙拉纤维材料低频单元<br>平衡的XLR和非平衡的RCA接口<br>细节展示<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/0039811507_1416469170_E8-1.jpg\">"
 )
@@ -189,6 +191,7 @@ Product.create!(
   description: "巧夺天工款 专业成人考级演奏实木古筝民族乐器(供应商直送)",
   price: 2150,
   quantity: 10000,
+
   # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51CjqUsFkRL._SL800_.jpg")#,
   # details: "琴体：花梨木<br>木料等级：A级<br>面板：A级考兰泡桐<br>装饰：万福图案<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/B072BN8KGL.jpg\">"
 )

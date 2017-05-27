@@ -48,38 +48,38 @@
 .productList-item-desc {
   color: #808080;
 }
-// .productList-item-cartBtn {
-// 	top: 168px;
-//   right: 20px;
-// 	width: 40px;
-// 	height: 40px;
-// 	text-align: center;
-// 	line-height: 40px;
-// 	background: #fff;
-// 	border-radius: 50%;
-// 	display: none;
-// 	-webkit-transition: all .1s;
-//   transition: all .1s;
-// }
-// .productList-item-cartBtn:hover {
-// 	background: #D32048;
-// 	.fa-shopping-cart {
-// 		color: #fff;
-// 	}
-// }
-// .productList-item-sellout {
-// 	position: absolute;
-// 	top: 80px;
-// 	left: 50%;
-// 	width: 70px;
-// 	height: 70px;
-// 	line-height: 70px;
-// 	margin-left: -35px;
-// 	font-size: 16px;
-// 	background-color: rgba(0, 0, 0, .55);
-// 	border-radius: 50%;
-// 	color: #fff;
-// }
+.productList-item-cartBtn {
+	top: 168px;
+  right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #fff;
+	border-radius: 50%;
+	display: none;
+	-webkit-transition: all .1s;
+  transition: all .1s;
+}
+.productList-item-cartBtn:hover {
+	background: #D32048;
+	.fa-shopping-cart {
+		color: #fff;
+	}
+}
+.productList-item-sellout {
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	margin-left: -35px;
+	font-size: 16px;
+	background-color: rgba(0, 0, 0, .55);
+	border-radius: 50%;
+	color: #fff;
+}
 
 
 //商品详细
@@ -134,11 +134,11 @@
   width: 1200px;
   height: 360px;
   margin: 0px auto;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .carousel-inner .item {
-  height: 375px;
+  height: 475px;
 }
 
 /*排序*/

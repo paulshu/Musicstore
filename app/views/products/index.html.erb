@@ -1,4 +1,4 @@
-<div class="minHeight1000 bg-gray">
+<div class="minHeight1000 lp-bg-gray">
   <div class="banner tc pt30 w1200 bc">
     <div id="myCarousel" class="carousel slide">
       <ol class="carousel-indicators">
@@ -6,40 +6,54 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
      </ol>
-    <div class="carousel-inner">
-            <div class="item active">
-             <a href="javacript:;">
-              <img src="https://cdn.pixabay.com/photo/2017/03/27/12/35/drums-2178425_960_720.jpg">
-              <div class="carousel-caption"></div>
-             </a>
-            </div>
-            <div class="item">
-             <a href="javacript:;">
-              <img src="https://cdn.pixabay.com/photo/2016/11/21/13/36/man-1845432_960_720.jpg">
-              <div class="carousel-caption"></div>
-             </a>
-            </div>
-            <div class="item">
-             <a href="javacript:;">
-              <img src="https://cdn.pixabay.com/photo/2016/11/23/00/23/blur-1851426_960_720.jpg">
-              <div class="carousel-caption"></div>
-             </a>
-            </div>
-          </div>
+     <div class="carousel-inner">
+        <div class="item active">
+         <a href="javacript:;">
+          <img src="https://ws2.sinaimg.cn/large/006tNc79ly1ffxys7chwej31hc0v0wru.jpg" style="width:1200;">
+          <div class="carousel-caption"></div>
+         </a>
+        </div>
+        <div class="item">
+         <a href="javacript:;">
+          <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fg0d5lfr85j30zk0npjwi.jpg">
+          <div class="carousel-caption"></div>
+         </a>
+        </div>
+        <div class="item">
+         <a href="javacript:;">
+          <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fg0d6okou8j30zk0nadku.jpg">
+          <div class="carousel-caption"></div>
+         </a>
         </div>
       </div>
-
-<div class="row">
-  <% @products.each do |product|%>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-        <% if product.photos.present? %>
-          <%= image_tag(product.photos[0].image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-        <% end %>
-      <% end %>
-      <%= product.title %> ￥ <%= product.price %>
     </div>
-  <% end %>
+  </div>
+  <div class="order clearfix mt30 w1200 bc">
+    <p class="fl title pl20 pr20">商品排序：</p>
+    <ul style="list-style-type:none;" , class="fl orderList">
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if !params[:order] %>">
+        <%= link_to("新品", products_path) %>
+      </li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_quantity' %>">
+        <%= link_to("销量", products_path(:order => "by_product_quantity")) %>
+      </li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_price' %>">
+        <%= link_to("价格", products_path(:order => "by_product_price")) %>
+      </li>
+      <!-- 用来判断点过哪个标签就加红哪个标签，注释掉就没有此变色功能  <%= 'orderList-activeItem' if params[:order] == 'by_product_price' %>-->
+    </ul>
+  </div>
+    <div class="productList-wrap w1200 pt20 bc">
+      <%= render :partial => "product_list"%>
+    </div>
 </div>
+<div class="category_sidebar tc border f12">
+  <% Category.all.each do |category| %>
+    <%= link_to category.name, products_path(category: category.name) %>
+  <% end %>
+  <a class="backtop" href="javascript:;"><i class="fa fa-arrow-circle-up"></i></a>
+</div>
+<br>
+<br>
+<br>
+<br>

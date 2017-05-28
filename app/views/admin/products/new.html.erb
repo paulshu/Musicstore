@@ -28,4 +28,8 @@
 
     <%= f.submit "Submit", data: {disable_with: "Submitting..."}, class: "btn btn-default" %>
   <% end %>
+  <script type="text/javascript">
+    autosize($('#product_description'));
+    // 加.是class,加#是id   功能，自动根据输入的description内容调整框的尺寸。
+  </script>
 </div>

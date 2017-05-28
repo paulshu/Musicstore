@@ -55,11 +55,12 @@ Product.create!(
   title: "PEARLRIVER UP119QS 黑色原声钢琴",
   description: "本款钢琴仍然采用德国优秀的防锈钢线,UP119QS采用新材料，新工艺进行限量生产，精细加工。",
   price: 17300,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg")#,
+  quantity: 105,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg") #,
   # details: "原装进口的键盖缓降器，持久耐用，安全舒适。<br>运用欧洲技术设计的不等厚音板，符合钢琴共鸣系统的发声规律，使音色丰满圆润，柔和纯美。<br><br>商品参数<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/B071YP9MH8-20170428-04.jpg\">"
 )
 
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg"))
 Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51cFH2VK8oL._SL800_.jpg"))
 Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61H7GFXdH3L._SL1000_.jpg"))
 Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61y8ea8qjuL._SL1000_.jpg"))
@@ -72,10 +73,11 @@ Product.create!(
   description: "真实的声音，自然的触感，充满享受的演奏，融入了先进技术的高性价比数码钢琴",
   price: 5699,
   quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51GZ0F3UlkL._SL800_.jpg")#,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51GZ0F3UlkL._SL800_.jpg")#,
   # details: "高端典范<br>真实的声音，自然的触感<br>迷人的木质厢式设计和雅马哈传奇的钢琴制造工艺造就了数码钢琴的优良品质。<br>细节展示<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/0095073249-01.jpg\">"
 )
 
+Photo.create!(product_id:2, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51GZ0F3UlkL._SL800_.jpg"))
 Photo.create!(product_id:2, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/611-ymMgDDL._SL1000_.jpg"))
 Photo.create!(product_id:2, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/515htlrmbqL._SL800_.jpg"))
 
@@ -86,11 +88,11 @@ Product.create!(
   title: "YAMAHA 民谣吉他 F310(原木色) ",
   description: "F系列的设计基于我们的FG系列吉他，具备杰出的耐用性和演奏表现力。",
   price: 1280,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51AYJIDslHL._SL1091_.jpg")#,
+  quantity: 100,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51AYJIDslHL._SL1091_.jpg")#,
   # details: "型号：F310<br>面板：云杉木<br>弦长：634mm<br>箱体深：96-116mm<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/hardline-asin/20121228-MIAB1-23.jpg\">"
 )
-
+Photo.create!(product_id:3, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51AYJIDslHL._SL1091_.jpg"))
 Photo.create!(product_id:3, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61XgBwyNolL._SL1200_.jpg"))
 Photo.create!(product_id:3, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/41kVWmvD6BL.jpg"))
 Photo.create!(product_id:3, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81UcflprWwL._SL1432_.jpg"))
@@ -102,11 +104,13 @@ Product.create!(
   title: "UMA 优玛 UKULELE(尤克里里)UK-03C 23寸",
   description: "台湾 UMA 优玛 UKULELE(尤克里里)UK-03C 23寸",
   price: 350,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81ietCRkerL._SL1500_.jpg")#,
+  quantity: 10001,
+
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81ietCRkerL._SL1500_.jpg")#,
   # details: "UK-03C 桃花心木<br>音点：ABS<br>弦线4弦：Aquila 意大利<br>参数详情<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/UK03S-20150921-4.jpg\">"
 )
 
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81ietCRkerL._SL1500_.jpg"))
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/91hTlArkMUL._SL1500_.jpg"))
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/91AOewuFbcL._SL1500_.jpg"))
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61%2ByJBAML7L._SL1188_.jpg"))
@@ -118,11 +122,13 @@ Product.create!(
   title: "PreSonus Eris E8 高解析度有源双功放监听音箱",
   description: "PreSonus紧凑型两分频有源监听音箱Eris系列 E8，可以准确的传递出坚实的低频和清晰的高频，独特的可选择调整的声学空间设计为用户表达出了更加准确的监听环境。它还可以控制模仿不同的听音环境，使频率响应达到较大限度的平直，使之胜于其它同等价位监听音箱。",
   price: 4580,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg")#,
+  quantity: 1002,
+
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg")#,
   # details: "130瓦AB类双功放<br>8英寸Kevlar™凯芙拉纤维材料低频单元<br>平衡的XLR和非平衡的RCA接口<br>细节展示<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/0039811507_1416469170_E8-1.jpg\">"
 )
 
+Photo.create!(product_id:5, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/717di%2Bn7TbL._SL1339_.jpg"))
 Photo.create!(product_id:5, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51cq9mhyxsL._SL1000_.jpg"))
 Photo.create!(product_id:5, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51bdjqCIfgL._SL1000_.jpg"))
 Photo.create!(product_id:5, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71T5AU9rPkL._SL1432_.jpg"))
@@ -134,11 +140,12 @@ Product.create!(
   title: "MOZA VN300 全手工小提琴 ",
   description: "MOZA提琴坚持做纯正的手工琴，由国际大师监制，高级制琴师制作，MOZA提琴每款都限量制作，当月没买到的，可以预定下月的。",
   price: 1500,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51xKrQ00rVL._SL800_.jpg")#,
+  quantity: 1003,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51xKrQ00rVL._SL800_.jpg")#,
   # details: "面板：东北云杉木，木材纹路清晰，音质更通透。背板：云南优质枫木，木质坚硬，传声效果佳<br>手工嵌线：对技术要求更严格，保证了琴箱的完整性和密封性，让音色更饱满<br>精选环保哑光漆，更均匀通透<br>琴码：德国进口琴码，根据琴体幅度打磨，更贴合，琴码弧度精准，确保音高的准确<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/S/aplus-seller-content-images-us-east-1/AAHKV2X7AFYLW/AI0XE1FXVNHMK/B00N9QTWXS/f6TGFhMMQfiO._UX970_TTW_.jpg\">"
 )
 
+Photo.create!(product_id:6, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51xKrQ00rVL._SL800_.jpg"))
 Photo.create!(product_id:6, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51RKttaIFNL._SL800_.jpg"))
 Photo.create!(product_id:6, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81BL4-PaX%2BL._SL1500_.jpg"))
 Photo.create!(product_id:6, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51xKrQ00rVL._SL800_.jpg"))
@@ -150,10 +157,11 @@ Product.create!(
   description: "可以随身携带的架子鼓。放入袋子可以随身携带到任何地方，将其展开可以立刻演奏。",
   price: 188,
   quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51uvdIynJAL._SL1000_.jpg")#,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51uvdIynJAL._SL1000_.jpg")#,
   # details: "此款不带外音无喇叭，需外接耳机或其他音响设备。<br>不支持DTX电子鼓游戏。<br>便于携带，打遍天下。<br>详情介绍<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/S/aplus-seller-content-images-us-east-1/AAHKV2X7AFYLW/A37FG8D2K8E2I4/B01DF0H9VO/n2tNplBT3WX._UX751_TTW_.JPG\">"
 )
 
+Photo.create!(product_id:7, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51uvdIynJAL._SL1000_.jpg"))
 Photo.create!(product_id:7, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81%2BnukLMmVL._SL1500_.jpg"))
 Photo.create!(product_id:7, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/612ZrN3SHgL._SL800_.jpg"))
 Photo.create!(product_id:7, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/31qPeeIquOL.jpg"))
@@ -166,10 +174,11 @@ Product.create!(
   description: "红木制造，手工精心打磨",
   price: 3600,
   quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61sUts-WY3L._SL1300_.jpg")#,
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61sUts-WY3L._SL1300_.jpg")#,
   # details: "优质桐木面板<br>尺寸：163cm * 34cm * 13cm<br>重量：7kg<br><br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/MIAH5-20150209-32.jpg\">"
 )
 
+Photo.create!(product_id:8, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61sUts-WY3L._SL1300_.jpg"))
 Photo.create!(product_id:8, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71V%2B0f9gLbL._SL1300_.jpg"))
 Photo.create!(product_id:8, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81zlTCLZKyL._SL1300_.jpg"))
 Photo.create!(product_id:8, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71SswUfs6XL._SL1300_.jpg"))
@@ -181,12 +190,30 @@ Product.create!(
   title: "XINGHAI 星海 古筝8812DQ",
   description: "巧夺天工款 专业成人考级演奏实木古筝民族乐器(供应商直送)",
   price: 2150,
-  quantity: 1000,
-  image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51CjqUsFkRL._SL800_.jpg")#,
+  quantity: 10000,
+
+  # image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51CjqUsFkRL._SL800_.jpg")#,
   # details: "琴体：花梨木<br>木料等级：A级<br>面板：A级考兰泡桐<br>装饰：万福图案<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/B072BN8KGL.jpg\">"
 )
 
+Photo.create!(product_id:9, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51CjqUsFkRL._SL800_.jpg"))
 Photo.create!(product_id:9, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61cup1yjE%2BL._SL800_.jpg"))
 Photo.create!(product_id:9, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71g6zAC8VOL._SL800_.jpg"))
 Photo.create!(product_id:9, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61Lp%2BZA5IkL._SL800_.jpg"))
 Photo.create!(product_id:9, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/614V3gdCjHL._SL800_.jpg"))
+
+
+Product.create!(
+  id: 10,
+  category_id: 2,
+  title: "YAMAHA 古典吉他 CG122MS(原木色) ",
+  description: "饱满的共鸣、优秀的演奏性、明快的外观，集众多魅力与一身的新CG系列登场了。",
+  price: 1650,
+  quantity: 1000,
+  # details: "琴体：花梨木<br>木料等级：A级<br>面板：A级考兰泡桐<br>装饰：万福图案<br><img alt=\"\" src=\"https://images-cn.ssl-images-amazon.com/images/G/28/aplus_rbs/B072BN8KGL.jpg\">"
+)
+
+Photo.create!(product_id:10, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/71eTXMGMvhL._SL1500_.jpg"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/81o3AiHq56L._SL1500_.jpg"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/812q%2BykCEYL._SL1500_.jpg"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/91NfiQXCN3L._SL1500_.jpg"))

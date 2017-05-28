@@ -10,7 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
+ *= require animate.min.css
  *= require_tree .
  *= require_self
  */
@@ -19,7 +19,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 //footer always on the bottom
 
 html {
@@ -53,6 +53,12 @@ a:hover {
 .minHeight1000 {
   min-height: 1000px;
 }
+
+/*边框*/
+.border {
+  border: 1px solid #DDDDDD;
+}
+
 
 /*footer*/
 .footer {
@@ -89,13 +95,14 @@ a:hover {
 //---------首页大图---------
 
 .box {
-    background-image: url("5.jpeg");
+    background-image: url("https://ws2.sinaimg.cn/large/006tNc79ly1ffxys7chwej31hc0v0wru.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 50px;
+    margin-top: -20px;
 
     .box-inner {
-        background-color: rgba(250, 250, 250, 0.39);
+        background-color: rgba(250, 250, 250, 0.22);
         padding-bottom: 5px;
         margin-top: 150px;
         margin-bottom: 150px;
@@ -137,17 +144,106 @@ a:hover {
     margin: 2em auto;
   }
 
+/*===== Product 產品  以下为第二方案=====*/
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
 
-// 商品展示列表样式设置，为商品栏做好排版整形
-  .product-list-style {                                 //图片+文字 块样式整形
-    margin: 3em auto 2em;
+  .background-image {
+    width: 100%;
+    margin-bottom: 20px;
   }
-  .product-list-style-img {                             //文字 块样式整形
-    margin-bottom: 1.2em;
+
+  a {
+    color: #666 !important;
   }
-  .all-product-box {
-    margin-bottom: 3em;
+
+  .btn {
+    background-color: #fff;
+    margin: 0 10px 0 10px;
   }
+
+  .btn:hover,
+  .btn:focus {
+    color: #eb5424;
+  }
+
+  .dropdown-menu {
+    li {
+      min-width: 200px;
+      padding: 2.5px 0 2.5px 0;
+    }
+
+    li:hover {
+      a {
+        background-color: #f0f0f0 !important;
+      }
+    }
+  }
+
+  a:hover {
+    color: #eb5424 !important;
+
+    img {
+      opacity: 0.75;
+    }
+  }
+
+  .search-error {
+    margin: 150px 0 150px 0;
+  }
+}
+
+/*===== 產品列表內容設置 以下为第二方案=====*/
+.product-content {
+  img {
+    width: 100%;
+    height: 220px;
+    margin: 7.5px auto 7.5px auto;
+  }
+
+  h2 {
+    margin-top: 150px;
+  }
+}
+
+.product-info {
+  text-align: left;
+  line-height: 14px;
+  min-height: 55px;
+}
+
+/*左侧导航栏*/
+.category_sidebar {
+  display: none;
+  position: fixed;
+  width: 36px;
+  background: #F6F9FA;
+  top: 50%;
+  left: 50%;
+  margin-left: -638px;
+  margin-top: -100px;
+  border-radius: 2px;
+}
+
+.category_sidebar a {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  line-height: 18px;
+  border-bottom: 1px solid #DDDDDD;
+  -webkit-transition:all 0.1s ease-in-out;
+  -moz-transition:all 0.1s ease-in-out;
+  -o-transition:all 0.1s ease-in-out;
+  -ms-transition:all 0.1s ease-in-out;
+  transition:all 0.1s ease-in-out;
+}
+
+.category_sidebar a:hover {
+  color: #fff;
+  background: #D32048;
+}
+
 
 // product/show  //
 .show-picture {
@@ -170,4 +266,151 @@ a:hover {
 }
 .show-photo-xsmall-box.nav-tabs li:last-of-type {
   margin-right: 0;
+}
+
+/*固定在顶部的头部*/
+.header_fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+}
+
+.header_fixed .header_content {
+  margin-top: 4px;
+  padding-bottom: 4px;
+}
+
+.header_placeholder {
+  display: none;
+}
+
+/*左侧导航栏*/
+.category_sidebar {
+  display: none;
+  position: fixed;
+  width: 36px;
+  background: #F6F9FA;
+  top: 50%;
+  left: 50%;
+  margin-left: -638px;
+  margin-top: -100px;
+  border-radius: 2px;
+}
+
+.category_sidebar a {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  line-height: 18px;
+  border-bottom: 1px solid #DDDDDD;
+  -webkit-transition:all 0.1s ease-in-out;  // ease-in-out规定以慢速开始和结束的过渡效果
+  -moz-transition:all 0.1s ease-in-out;  /* Safari and Chrome */
+  -o-transition:all 0.1s ease-in-out;  // -o/-moz/ms/webkit 分别为适应不同的浏览器
+  -ms-transition:all 0.1s ease-in-out;
+  transition:all 0.1s ease-in-out;
+}
+
+.category_sidebar a:hover {
+  color: #fff;
+  background: #D32048;
+}
+
+
+/*右侧边栏 暂时没有*/
+.sidebar {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  right: 30px;
+  bottom: 88px;
+  width: 40px;
+  height: auto;
+  line-height: 20px;
+  * {
+    box-sizing: border-box;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    position: relative;
+    display: block;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 8px;
+    background: #fbfbfb;
+    line-height: 42px;
+    &:hover {
+      background: #eee;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &.backtop i {
+      font-size: 18px;
+      &:hover {
+        color: #D32048;
+      }
+    }
+    &.support {
+      i {
+        font-size: 20px;
+        &:hover {
+          color: #D32048;
+        }
+      }
+      .ewm {
+        line-height: 22px;
+        display: none;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        display: none;
+        left: 0;
+        top: 50%;
+        margin-top: -68px;
+        width: 136px;
+        height: 136px;
+        padding-right: 20px;
+        p {
+          background: #eee;
+          border-radius: 3px;
+          padding: 12px;
+        }
+      }
+    }
+    i {
+      color: #555;
+    }
+  }
+}
+
+
+///*字体颜色和背景颜色*/
+.bg-gray {
+  background: #F5F5F5
+}
+.bg-red {
+  background: #D32048
+}
+.col-gray {
+  color: #808080;
+}
+.col-black {
+  color: #333333;
+}
+.col-red {
+  color: #d32048;
+}
+.col-blue {
+  color: #005AA0;
 }

@@ -18,5 +18,8 @@ class Product < ApplicationRecord
   belongs_to :category
   has_many :photos   #一个产品中含用很多图片
   accepts_nested_attributes_for :photos # 把photos 作为product的巢状属性
-#  mount_uploader :image, ImageUploader
+#  mount_uploader :image, ImageUploader  上传单张图片可用
+
+  scope :recent, -> { order('created_at DESC') }
+  
 end

@@ -32,7 +32,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :cart_items
+  resources :cart_items do
+    member do
+      post :add_quantity
+      post :reduce_quantity
+    end
+  end
+  #增加和减少购物车内商品的数目
   resources :orders do
     member do
       post :pay_with_alipay

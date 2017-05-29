@@ -322,7 +322,7 @@ Product.create!(
   title: "JBL LSR 305-CH 5寸有源监听音箱",
   description: "HIFI 发烧专用音箱",
   price: 1199,
-  quantity: 10001,
+  quantity: 0,
   # image: MiniMagick::Image.open("") ##details
 )
 

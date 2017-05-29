@@ -5,7 +5,6 @@
 /*商品列表*/
 .productList {
   margin: 20px auto;
-  margin-top:  -20px; //合并后加的，出现排版下降的问题
   width: 1220px;
   overflow: hidden;
 }
@@ -32,7 +31,7 @@
   }
   img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     // border-radius: 8px;
   }
 }
@@ -139,7 +138,7 @@
 }
 
 .carousel-inner .item {
-  height: 475px;
+  height: 375px;
 }
 
 /*排序*/

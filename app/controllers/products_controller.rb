@@ -57,19 +57,19 @@ class ProductsController < ApplicationController
   end
 
   def search
-   if @query_string.present?
-     @products = search_params
-   end
- end
+    if @query_string.present?
+      @products = search_params
+    end
+  end
 
- private
+  private
 
- def validate_search_key
+  def validate_search_key
    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
- end
+  end
 
- def search_params
-   Product.ransack({:title_or_description_cont => @query_string}).result(distinct: true)
- end
+  def search_params
+    Product.ransack({:title_or_description_cont => @query_string}).result(distinct: true)
+  end
 # title 为精确搜索，页加上cont即title_cont为模糊搜索
 end

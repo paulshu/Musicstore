@@ -71,5 +71,5 @@ class ProductsController < ApplicationController
  def search_params
    Product.ransack({:title_or_description_cont => @query_string}).result(distinct: true)
  end
-
+# title 为精确搜索，页加上cont即title_cont为模糊搜索
 end

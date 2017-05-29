@@ -42,8 +42,6 @@ Product.create!(
 
 Photo.create!(product_id:1, image: MiniMagick::Image.open("https://ws1.sinaimg.cn/large/006tNbRwgy1fg2ajf6vf2j30rs0rs0u7.jpg"))
 Photo.create!(product_id:1, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2ajvrr0ij30rs0rs0tx.jpg"))
-Photo.create!(product_id:1, image: MiniMagick::Image.open(""))
-Photo.create!(product_id:1, image: MiniMagick::Image.open(""))
 
 
 Product.create!(

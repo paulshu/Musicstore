@@ -26,6 +26,9 @@ Rails.application.routes.draw do
       post :reduce_buying_quantity
       post :add_buying_quantity
     end
+    collection do
+      get :search
+    end
   end
   resources :carts do
     collection do

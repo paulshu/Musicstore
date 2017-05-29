@@ -18,7 +18,8 @@ class CartItemsController < ApplicationController
     @cart_item = @cart.cart_items.find_by(product_id: params[:id])
     @product = @cart_item.product
     @cart_item.destroy
-
+    @product.quantity += @product.buying_quantity
+    @product.save
     flash[:warning] = "成功将 #{@product.title} 从购物车删除！"
     redirect_to :back
   end
@@ -32,8 +33,6 @@ class CartItemsController < ApplicationController
       @cart_item.product.quantity -=1
 			@cart_item.save
        redirect_to :back
-      # respond_to do |format|
-      #   format.js   { render :layout => false }
 
 		elsif @cart_item.quantity == @cart_item.product.quantity
 			redirect_to carts_path, alert: "库存不足！"
@@ -49,8 +48,6 @@ class CartItemsController < ApplicationController
       @cart_item.product.quantity +=1
 			@cart_item.save
        redirect_to :back
-			# respond_to do |format|
-      #   format.js   { render :layout => false }
 
 	   elsif @cart_item.quantity == 0
        redirect_to carts_path, alert: "购买商品不能少于零！"

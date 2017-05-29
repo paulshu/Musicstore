@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
       else
         Product.all.recent
       end
-      
+
     else
       @category_id = Category.find_by(name: params[:category]).id
       @products = Product.where(category_id:  @category_id)
@@ -25,10 +25,32 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     if !current_cart.products.include?(@product)
       current_cart.add_product_to_cart(@product)
+      @product.quantity -= @product.buying_quantity
+      @product.save
+      @product.buying_quantity = 1
       flash[:notice] ="你已成功将#{@product.title}加入购物车"
     else
       flash[:warning] ="你的购物车已有此物品"
     end
     redirect_to :back
+  end
+
+  def add_buying_quantity
+    @product = Product.find(params[:id])
+    if @product.buying_quantity <= @product.quantity
+      @product.buying_quantity +=1
+      @product.save
+       redirect_to :back
+    end
+  end
+
+  def reduce_buying_quantity
+    @product = Product.find(params[:id])
+    if @product.buying_quantity > 1
+      @product.buying_quantity -= 1
+      @product.save
+       redirect_to :back
+
+    end
   end
 end

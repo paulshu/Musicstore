@@ -1,48 +1,21 @@
-<div class="col-md-12 ">
- <div class="row box">
-   <!-- <div id="myCarousel" class="carousel slide">
-     <ol class="carousel-indicators">
-       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-       <li data-target="#myCarousel" data-slide-to="1"></li>
-       <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-       <div class="item active">
-        <a href="javacript:;">
-         <img src="https://ws2.sinaimg.cn/large/006tNc79ly1ffxys7chwej31hc0v0wru.jpg" style="width:1200;">
-         <div class="carousel-caption"></div>
-        </a>
-       </div>
-       <div class="item">
-        <a href="javacript:;">
-         <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fg0d5lfr85j30zk0npjwi.jpg">
-         <div class="carousel-caption"></div>
-        </a>
-       </div>
-       <div class="item">
-        <a href="javacript:;">
-         <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fg0d6okou8j30zk0nadku.jpg">
-         <div class="carousel-caption"></div>
-        </a>
-       </div>
-     </div>
-   </div> -->
-   <div class="box-inner col-md-6 col-md-offset-3">
-      <h1 class="title">Music Store</h1>
-      <p class="slogan">在这里，遇见以声相许
-      <br>
-      <br>
-       这不是简单的擦肩而过，而是回味悠长的邂逅
-      </p>
-      <p class="lead"><a class="btn btn-lg btn-danger" href="/products">开始选购</a></p>
-    </div>
-  </div>
-</div>
+<div class="lp">
+   <div class="lp-banner">
+     <div class="jumbotron">
+     	    <div class="text-content">
+     	      <h1 class="jumbotron-title">这不是简单的擦肩而过，而是回味悠长的邂逅</h1>
+     	      <p class="jumbotron-slogan">
+     	        在这里，遇见以声相许
+     	      </p>
+     	      <p class="jumbotron-lead"><a class="btn-lg lp-b-btn" href="/products">
+     	      	开始选购</a>
+     	      </p>
+     	    </div>
+     	  </div>
+   	 </div>
 
-      <div class="lp">
-        <div class="lp-bg-gray">
-          <h3 class="title tc f22 pb50 text-center">热卖的声音</h3>
-
+      <div class="lp-products pt60 pb60 lp-bg-gray">
+        <!-- <div class="lp-bg-gray"> -->
+          <h3 class="title tc f22 pb50 text-center">热卖的商品</h3>
           <ul class="productList clearfix">
             <% Product.all.includes(:photos).each_with_index do |product, index| %>
     				    <% if index < 10 %>
@@ -51,5 +24,100 @@
             <% end %>
           </ul>
     </div>
-  </div>
+  <!-- </div> -->
+
+  <div class="lp-advantage pt60 pb60">
+		<h2 class="title tc f22 pb50">我们保障</h2>
+		<div class="container bc">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn">
+						<img class="lp-advantage-img" src="https://ws1.sinaimg.cn/large/006tNbRwgy1fg2kw94kr5j3034032t8m.jpg">
+						<p class="lp-advantage-title f18 mt20">100%正品保证</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">MusicStore的每一件商品都通过严苛的品质把关，保证正品，假一赔十</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+						<img class="lp-advantage-img" src="https://ws4.sinaimg.cn/large/006tNbRwgy1fg2l2o4m2aj3034035jra.jpg">
+						<p class="lp-advantage-title f18 mt20">全程可追溯</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">联合海关部门开发溯源系统，严格审核供应商资质，实现供应链全程可追溯</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+						<img class="lp-advantage-img" src="https://ws1.sinaimg.cn/large/006tNbRwgy1fg2kyatsoaj30340303yf.jpg">
+						<p class="lp-advantage-title f18 mt20">品牌官方授权</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">与全球数百个知名品牌及供应商达成战略合作，取得品牌直接授权</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="lp-feedback pt60 pb60 lp-bg-gray">
+		<h2 class="title tc f22 pb20">用户好评</h2>
+		<p class="f16 tc light pb30">听听他们是怎么说的</p>
+    <div class="home-people container">
+    	<div class="row">
+    		<div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://ws2.sinaimg.cn/large/006tNbRwgy1fg2m8byav2j3069069gmc.jpg">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            金牌会员杨**瑜
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">准备自学吉他，留意雅马哈的这款FG830很久了，在Musicstore上看到它上架后，立马下单，产品包装完好，吉他无划痕，正品!</div>
+	        </div>
+	      </div>
+	      <div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://ws4.sinaimg.cn/large/006tNbRwgy1fg2m9kiucsj31400zkdi9.jpg">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            钻石会员Lu**ee
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">第一次在网上买这么贵的东西，总感觉不放心，可是MusicStore没让我失望，发货快，一个星期到，沒有磕碰，钢琴音色圆润，大品牌，细节很到位！</div>
+	        </div>
+	      </div>
+	      <div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://ws3.sinaimg.cn/large/006tNbRwgy1fg2m5g0lb8j3069069t8m.jpg">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            银牌会员J**n
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">MusicStore果然没让我失望，质量有保证，一周前买了这款音箱，煲了几天，各方面的音效都挺满意，值得表扬的是，低音，震撼有力。赞！</div>
+	        </div>
+	      </div>
+    	</div>
+    </div>
+	</div>
+
+	<div class="lp-action tc pr">
+		<div class="text-content pa pt60 pb60">
+			<p class="f16 pb20" style="font-size:25px;">撩你，用一首歌的时间</p>
+			<p class="wow zoomIn" data-wow-duration=".5s">
+				<a class="btn-lg lp-b-btn bc"  href="/products">开始选购</a>
+			</p>
+		</div>
+	</div>
 </div>

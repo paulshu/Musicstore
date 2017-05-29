@@ -90,7 +90,6 @@ Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws3.sinaimg.c
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anou9wdj30rs0rst9g.jpg"))
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2ano4oluj30rs0rsjsg.jpg"))
 Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anns2czj30rs0rsac5.jpg"))
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2ann1a03j30rs0rsn1e.jpg"))
 
 
 Product.create!(

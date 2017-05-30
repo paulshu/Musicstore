@@ -40,8 +40,8 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-Photo.create!(product_id:1, image: open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-101.jpg"))
-Photo.create!(product_id:1, image: open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-102.jpg"))
+Photo.create!(product_id:1, image: open("http://ww4.sinaimg.cn/large/006tNbRwgy1ffrq4hl3blj30rs0jqdjg.jpg"))
+Photo.create!(product_id:1, image: open("http://ww2.sinaimg.cn/large/006tNbRwgy1ffrqa6g8lbj30i80r540z.jpg"))
 
 
 Product.create!(

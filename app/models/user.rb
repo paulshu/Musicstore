@@ -33,7 +33,7 @@ class User < ApplicationRecord
 
    # ---收藏商品功能三方关系代码块---
   has_many :favorites
-  has_many :favorite_products, through: :favorites, source: :products
+  has_many :favorite_products, through: :favorites, source: :product
 
   def is_fans_of?(product) #fans 与 product.rb中的has_many对应，可以用不同的词
    favorite_products.include?(product)

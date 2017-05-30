@@ -60,7 +60,7 @@ class ProductsController < ApplicationController
 # --收藏商品 --
   def favorite
      @product = Product.find(params[:id])
-    if !current_user.is_favorite_of?(@product)
+    if !current_user.is_fans_of?(@product)
       current_user.favorite!(@product)
       flash[:notice] = "你已将 ''#{@product.title}'' 加入关注"
     else
@@ -71,7 +71,7 @@ class ProductsController < ApplicationController
 
   def unfavorite
      @product = Product.find(params[:id])
-    if current_user.is_favorite_of?(@product)
+    if current_user.is_fans_of?(@product)
       current_user.unfavorite!(@product)
       flash[:notice] = "你已将 ''#{@product.title}'' 移除关注"
     else

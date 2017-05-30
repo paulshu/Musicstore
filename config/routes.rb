@@ -15,12 +15,12 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    resources :orders
+    resources :orders      #用户后台查看订单
+    resources :favorites   #用户收藏，与用户有关
   end
 
   root 'welcome#index'
 
-  resources :favorites
 
   resources :products do
     member do
@@ -31,10 +31,10 @@ Rails.application.routes.draw do
       post :unfavorite
     end
     collection do
-      get :search
+      get :search          #搜索功能
     end
   end
-  resources :carts do
+  resources :carts do      #购物车明细
     collection do
       delete :clean
       post :checkout

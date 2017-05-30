@@ -20,7 +20,9 @@ class Product < ApplicationRecord
   has_many :photos   #一个产品中含用很多图片
   accepts_nested_attributes_for :photos # 把photos 作为product的巢状属性
 #  mount_uploader :image, ImageUploader  上传单张图片可用
-
+  belongs_to :user
+  has_many :favorites
+  has_many :fans, through: :favorites, source: :user
   scope :recent, -> { order('created_at DESC') }
-  
+
 end

@@ -30,9 +30,24 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
+
+   # ---收藏商品功能三方关系代码块---
   has_many :favorites
   has_many :favorite_products, through: :favorites, source: :products
 
+  def is_fans_of?(product) #fans 与 product.rb中的has_many对应，可以用不同的词
+   favorite_products.include?(product)
+  end
+
+  def favorite!(product)
+   favorite_products << product
+  end
+
+  def unfavorite!(product)
+   favorite_products.delete(product)
+  end
+
+  # ---is_admin判断式---
   def admin?
     is_admin
   end

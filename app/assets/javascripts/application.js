@@ -19,6 +19,7 @@
 //= require autosize.min
 //= require jquery.countdown.min
 //= require wow.min
+//= require bootstrap/modal
 //= require_tree .
 
 // 首页轮播

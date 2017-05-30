@@ -20,11 +20,15 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :favorites
+
   resources :products do
     member do
       post :add_to_cart
-      post :reduce_buying_quantity
+      post :reduce_buying_quantity #增加和减少添加到购物车以前的购买数量
       post :add_buying_quantity
+      post :favorite
+      post :unfavorite
     end
     collection do
       get :search

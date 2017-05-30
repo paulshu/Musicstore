@@ -30,6 +30,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :products
 
   def admin?
     is_admin

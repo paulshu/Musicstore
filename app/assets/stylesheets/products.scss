@@ -5,13 +5,12 @@
 /*商品列表*/
 .productList {
   margin: 20px auto;
-  margin-top:  -20px; //合并后加的，出现排版下降的问题
-  width: 1200px;
+  width: 1220px;
   overflow: hidden;
 }
 .productList-item {
   float: left;
-  width: 225px;
+  width: 228px;
   height: 320px;
   background: #fff;
   margin-right: 15px;
@@ -43,6 +42,7 @@
   color: #333;
 }
 .productList-item-price {
+  margin-top: 45px;
   color: #D32048;
 }
 .productList-item-desc {
@@ -115,7 +115,7 @@
 	line-height: 45px;
 	border: 1px solid #d32048;
 	font-family: "Microsoft Yahei",simhei;
-	border-radius: 50px;
+	border-radius: 8px;
 	&.add-cart {
 		color: #fff;
 	}
@@ -132,13 +132,13 @@
 /*轮播图*/
 .banner img {
   width: 1200px;
-  height: 360px;
+  height: 1000px;
   margin: 0px auto;
   // overflow: hidden;
 }
 
 .carousel-inner .item {
-  height: 475px;
+  height: 375px;
 }
 
 /*排序*/
@@ -157,4 +157,16 @@
 }
 .orderList-activeItem a {
   color: #d32048;
+}
+
+//轮播图的caption1
+.caption1{
+  h1 {
+    margin-bottom:30px;
+
+  }
+  p {
+    font-size:20px;
+    margin-bottom:20px;
+  }
 }

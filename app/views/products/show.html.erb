@@ -37,16 +37,15 @@
     <p class="intro-text-count">
     <span class="pl20 pr30">库存</span><span id="quantity"><%= @product.quantity %></span>
     </p>
+    <div class="intro-text-quantity clearfix">
+      <span class="pl20 pr30 fl">数量</span>
+      <div class="countNumber fl mt10">
+        <%= link_to("-", reduce_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-sub", method: :post) %>
+        <input class="countNumber-input" type="text" value="<%= @product.buying_quantity %>">
+        <%= link_to("+", add_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-plus", method: :post) %>
+      </div>
+    </div>
 
-    <!-- <div class="product-price"> ￥ <%= @product.price %></div>
-    <div style="font-size:30px;color:"> 数量 ：<%= @product.quantity %></div> -->
-
-    <!-- <div class="pull-right" style="margin-right:80px;">
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-      <% else %>
-        <br> <h4>已销售一空，无法购买</h4>
-      <% end %> -->
 
       <p class="intro-text-btnWrap">
         <% if @product.quantity.present? && @product.quantity > 0 %>

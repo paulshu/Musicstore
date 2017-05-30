@@ -16,6 +16,14 @@ class OrdersController < ApplicationController
           product_list.save
         end
         current_cart.clean!
+
+        # current_cart.cart_items.each do |cart_item|
+        #   @cart = current_cart
+        #   @cart_item = @cart.cart_items.find_by(product_id: params[:id])
+        #   @product = @cart_item.product
+        #   @product.quantity -= 1
+        #   @product.save
+        # end
         OrderMailer.notify_order_placed(@order).deliver!
 
       redirect_to order_path(@order.token)

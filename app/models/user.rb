@@ -52,4 +52,14 @@ class User < ApplicationRecord
   def admin?
     is_admin
   end
+
+  # ---显示邮件@前半部分为用户名----
+  def display_name
+    if self.name.present?
+      self.name
+    else
+       self.email.split("@").first
+    end
+  end
+
 end

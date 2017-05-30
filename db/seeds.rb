@@ -85,11 +85,16 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2amxfiztj30rs0rsaaz.jpg"))
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2anpjup8j30rs0rs0tn.jpg"))
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anou9wdj30rs0rst9g.jpg"))
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2ano4oluj30rs0rsjsg.jpg"))
-Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anns2czj30rs0rsac5.jpg"))
+# Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2amxfiztj30rs0rsaaz.jpg"))
+# Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2anpjup8j30rs0rs0tn.jpg"))
+# Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anou9wdj30rs0rst9g.jpg"))
+# Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2ano4oluj30rs0rsjsg.jpg"))
+# Photo.create!(product_id:4, image: MiniMagick::Image.open("https://ws4.sinaimg.cn/large/006tNbRwgy1fg2anns2czj30rs0rsac5.jpg"))
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg"))
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51cFH2VK8oL._SL800_.jpg"))
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61H7GFXdH3L._SL1000_.jpg"))
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61y8ea8qjuL._SL1000_.jpg"))
+Photo.create!(product_id:4, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61gnRs0hGYL._SL1000_.jpg"))
 
 
 Product.create!(

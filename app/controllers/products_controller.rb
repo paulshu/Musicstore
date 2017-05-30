@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-
+  before_action :authenticate_user!, only: [:favorite, :unfavorite]
   def index
     if params[:category].blank?
       @products = case params[:order]
@@ -37,6 +37,7 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
+  # --调整商品购买的数量 --
   def add_buying_quantity
     @product = Product.find(params[:id])
     if @product.buying_quantity <= @product.quantity
@@ -56,6 +57,30 @@ class ProductsController < ApplicationController
     end
   end
 
+# --收藏商品 --
+  def favorite
+     @product = Product.find(params[:id])
+    if !current_user.is_fans_of?(@product)
+      current_user.favorite!(@product)
+      flash[:notice] = "你已将 ''#{@product.title}'' 加入关注"
+    else
+      flash[:warning] = "此商品已被关注！"
+    end
+      redirect_to :back
+  end
+
+  def unfavorite
+     @product = Product.find(params[:id])
+    if current_user.is_fans_of?(@product)
+      current_user.unfavorite!(@product)
+      flash[:notice] = "你已将 ''#{@product.title}'' 移除关注"
+    else
+      flash[:warning] = "此商品还未关注，马上去关注吧！"
+    end
+      redirect_to :back
+  end
+
+    # --search 商品搜索--
   def search
     if @query_string.present?
       @products = search_params

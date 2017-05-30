@@ -33,7 +33,7 @@
               <td><%= cart_item.product.price %></td>
               <td>
                 <div class="cartPage-productList">
-                  <%#= render :partial => "cart_countnumber" %>
+                  <%#= render :partial => "cart_countnumber", :collection =>@cart_items, :as => :cart_item %>
                   <div class="item-quantity fl tc">
                     <div class="countNumber">
                       <%= link_to("-", reduce_quantity_cart_item_path(cart_item.product_id), class: "countNumber-btn countNumber-btn-sub", method: :post) %>

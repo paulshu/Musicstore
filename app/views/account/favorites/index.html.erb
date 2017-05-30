@@ -1,0 +1,34 @@
+<div class="col-md-8 col-md-offset-2">
+ <div class="panel panel-info">
+   <div class="panel-heading text-center">
+     <h2>我关注的商品</h2>
+   </div>
+
+   <div class="panel-footer">
+     <table class="table table-bordered">
+       <thead>
+         <tr>
+           <th>商品名称</th>
+           <th>价格</th>
+           <th>商品说明</th>
+           <th>操作</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% @products.each do |product| %>
+         <tr>
+           <td> <%= link_to(product.title, product_path(product)) %> </td>
+           <td style="color:red"> <%= product.price %></td>
+           <td> <%= product.description %></td>
+           <td>
+             <% if current_user && current_user.is_fans_of?(product) %>
+              <%= link_to("取消关注", unfavorite_product_path(product), method: :post) %>
+             <% end %>
+           </td>
+         </tr>
+         <% end %>
+       </tbody>
+     </table>
+   </div>
+ </div>
+</div>

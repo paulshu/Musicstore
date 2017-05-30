@@ -19,22 +19,26 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    resources :orders
+    resources :orders      #用户后台查看订单
+    resources :favorites   #用户收藏，与用户有关
   end
 
   root 'welcome#index'
 
+
   resources :products do
     member do
       post :add_to_cart
-      post :reduce_buying_quantity
+      post :reduce_buying_quantity #增加和减少添加到购物车以前的购买数量
       post :add_buying_quantity
+      post :favorite
+      post :unfavorite
     end
     collection do
-      get :search
+      get :search          #搜索功能
     end
   end
-  resources :carts do
+  resources :carts do      #购物车明细
     collection do
       delete :clean
       post :checkout

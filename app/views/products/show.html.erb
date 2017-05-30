@@ -26,37 +26,46 @@
   </div>
   <div class="col-md-6">
     <div class="intro-text fr">
-    <h3 class="f20 ell fb"><%= @product.title %></h3>
-    <p class="intro-text-desc"><%= @product.description %></p>
-    <p class="intro-text-value bg-gray">
-      <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
-    </p>
-    <p class="intro-text-service">
-      <span class="pl20 pr30">运费</span><span>满99元包邮 | 正品保证</span>
-    </p>
-    <p class="intro-text-count">
-    <span class="pl20 pr30">库存</span><span id="quantity"><%= @product.quantity %></span>
-    </p>
-    <div class="intro-text-quantity clearfix">
-      <span class="pl20 pr30 fl">数量</span>
-      <div class="countNumber fl mt10">
-        <%= link_to("-", reduce_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-sub", method: :post) %>
-        <input class="countNumber-input" type="text" value="<%= @product.buying_quantity %>">
-        <%= link_to("+", add_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-plus", method: :post) %>
-      </div>
-    </div>
-
-
-      <p class="intro-text-btnWrap">
-        <% if @product.quantity.present? && @product.quantity > 0 %>
-            <%= link_to("加入购物车", add_to_cart_product_path(@product),
-                :method => :post,
-                :remote => true,
-                :class => "intro-text-btn addCartBtn add-cart pl15 pr15 mt30 ml20 tc col-red f20 bg-red") %>
-        <% else %>
-          <a href="javascript:;" class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red btn-disabled">已售完</a>
-        <% end %>
+      <h3 class="f20 ell fb"><%= @product.title %></h3>
+      <p class="intro-text-desc"><%= @product.description %></p>
+      <p class="intro-text-value bg-gray">
+        <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
       </p>
+      <p class="intro-text-service">
+        <span class="pl20 pr30">运费</span><span>满99元包邮 | 正品保证</span>
+      </p>
+      <p class="intro-text-count">
+        <span class="pl20 pr30">库存</span><span id="quantity"><%= @product.quantity %></span>
+      </p>
+      <p>
+        <div class="intro-text-quantity clearfix">
+          <span class="pl20 pr30 fl">数量</span>
+          <div class="countNumber fl mt10">
+            <%= link_to("-", reduce_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-sub", method: :post) %>
+            <input class="countNumber-input" type="text" value="<%= @product.buying_quantity %>">
+            <%= link_to("+", add_buying_quantity_product_path(@product), class: "countNumber-btn countNumber-btn-plus", method: :post) %>
+          </div>
+        </div>
+
+        <div class="intro-text-favorite">
+           <% if current_user && current_user.is_fans_of?(@product) %>
+             <i class="fa fa-star"></i><%= link_to("已关注（点击取消关注）", unfavorite_product_path(@product), method: :post) %>
+           <% else %>
+            <i class="fa fa-star-o"></i><%= link_to("关注商品", favorite_product_path(@product), method: :post) %>
+           <% end %>
+         </div>
+       </p>
+
+        <p class="intro-text-btnWrap">
+          <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("加入购物车", add_to_cart_product_path(@product),
+                  :method => :post,
+                  :remote => true,
+                  :class => "intro-text-btn addCartBtn add-cart pl15 pr15 mt30 ml20 tc col-red f20 bg-red") %>
+          <% else %>
+            <a href="javascript:;" class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red btn-disabled">已售完</a>
+          <% end %>
+        </p>
 
       <!-- <div id="getting-started"></div>
         <script type="text/javascript">

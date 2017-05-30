@@ -40,11 +40,11 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg"))
-Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/51cFH2VK8oL._SL800_.jpg"))
-Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61H7GFXdH3L._SL1000_.jpg"))
-Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61y8ea8qjuL._SL1000_.jpg"))
-Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61gnRs0hGYL._SL1000_.jpg"))
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg"))
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/51cFH2VK8oL._SL800_.jpg"))
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61H7GFXdH3L._SL1000_.jpg"))
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61y8ea8qjuL._SL1000_.jpg"))
+Photo.create!(product_id:1, image: MiniMagick::Image.open("https://images-cn.ssl-images-amazon.com/images/I/61gnRs0hGYL._SL1000_.jpg"))
 
 
 Product.create!(
@@ -57,11 +57,11 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-Photo.create!(product_id:2, image: open("http://a2.qpic.cn/psb?/V135kGro0QFSjx/Cf2KcysIhyVvmuVhAWuspLdOufUwOY3SiV0wZzoFf9M!/b/dGkBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
-Photo.create!(product_id:2, image: open("http://a3.qpic.cn/psb?/V135kGro0QFSjx/cRL6Tb5nXWuIPoYClHJ.hT0agdnVK0C6Goy116O*4yQ!/b/dGoBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
-Photo.create!(product_id:2, image: open("http://a1.qpic.cn/psb?/V135kGro0QFSjx/JbKuLYrlFrX4t*ScmFSHqksUq1iNjxWIWka1ep6aEFw!/b/dGsBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
-Photo.create!(product_id:2, image: open("http://a1.qpic.cn/psb?/V135kGro0QFSjx/5VSf44tF2KUe1k*N.ZY7eQBUK5QO4qk8upwbkVxjIbE!/b/dFYBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
-Photo.create!(product_id:2, image: open("http://a3.qpic.cn/psb?/V135kGro0QFSjx/TtK.8RUo*bnAffwoOB2COJvIkzAhauiqFt5zzuV2HCo!/b/dFUBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
+Photo.create!(product_id:2, image: MiniMagick::Image.open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-201.jpg"))
+Photo.create!(product_id:2, image: MiniMagick::Image.open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-202.jpg"))
+Photo.create!(product_id:2, image: MiniMagick::Image.open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-203.jpg"))
+Photo.create!(product_id:2, image: MiniMagick::Image.open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-204.jpg"))
+Photo.create!(product_id:2, image: MiniMagick::Image.open("http://oqqzffr5e.bkt.clouddn.com/2017-05-30-205.jpg"))
 
 # Product.create!(
 #   id: 3,

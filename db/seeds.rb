@@ -70,11 +70,11 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-# Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2alyu0xaj30rs0rsabe.jpg"))
-# Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2am6n34xj30m80m8wfg.jpg"))
-# Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws1.sinaimg.cn/large/006tNbRwgy1fg2amdc0ugj30rs0rswh4.jpg"))
-# Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2amlv11xj30rs0rsdhq.jpg"))
-#
+Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws2.sinaimg.cn/large/006tNbRwgy1fg2alyu0xaj30rs0rsabe.jpg"))
+Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2am6n34xj30m80m8wfg.jpg"))
+Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws1.sinaimg.cn/large/006tNbRwgy1fg2amdc0ugj30rs0rswh4.jpg"))
+Photo.create!(product_id:3, image: MiniMagick::Image.open("https://ws3.sinaimg.cn/large/006tNbRwgy1fg2amlv11xj30rs0rsdhq.jpg"))
+
 # Product.create!(
 #   id: 4,
 #   category_id: 2,

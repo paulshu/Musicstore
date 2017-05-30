@@ -40,8 +40,11 @@ Product.create!(
   # image: MiniMagick::Image.open("") ##details
 )
 
-Photo.create!(product_id:1, image: open("http://a1.qpic.cn/psb?/V135kGro0QFSjx/NfwbKTsxSPIYZ9ub6V.K6szuGQVrA4tMh9XXJlG8poM!/b/dGsBAAAAAAAA&bo=gAKAAgAAAAARBzA!&rf=viewer_4"))
-Photo.create!(product_id:1, image: open("http://a1.qpic.cn/psb?/V135kGro0QFSjx/meo0oouPr84ZkDoGXiiNyz5JR6zXXF5X8AIWAfyD29k!/b/dGsBAAAAAAAA&bo=gAKAAgAAAAARADc!&rf=viewer_4"))
+Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/51m5ub-KidL._SL1000_.jpg"))
+Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/51cFH2VK8oL._SL800_.jpg"))
+Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61H7GFXdH3L._SL1000_.jpg"))
+Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61y8ea8qjuL._SL1000_.jpg"))
+Photo.create!(product_id:1, image: open("https://images-cn.ssl-images-amazon.com/images/I/61gnRs0hGYL._SL1000_.jpg"))
 
 
 Product.create!(

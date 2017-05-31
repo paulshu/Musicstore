@@ -1,22 +1,39 @@
  <div class="col-md-8 col-md-offset-2">
   <div class="panel panel-info">
     <div class="panel-heading text-center">
-      <h2>订单列表</h2>
+      <h2>我的订单</h2>
     </div>
 
     <div class="panel-footer">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>#</th>
+            <th>订单序号</th>
+            <th>订单状态</th>
             <th>生成时间</th>
+            <th>操作</th>
           </tr>
         </thead>
         <tbody>
           <% @orders.each do |order| %>
           <tr>
             <td> <%= link_to(order.id, order_path(order.token))%> </td>
+            <% if order.order_cancelled? %>
+              <td>订单已取消</td>
+            <% elsif order.order_placed? %>
+              <td>等待付款</td>
+            <% elsif order.paid?%>
+              <td>已完成付款</td>
+            <% elsif order.good_returned? %>
+              <td>已退货</td>
+            <% elsif order.shipping? %>
+              <td>已发货，运输中</td>
+            <% else %>
+              <td>已签收</td>
+            <% end %>
+
             <td> <%= order.created_at.to_s(:long) %></td>
+            <td><%= link_to("进入", order_path(order.token)) %></td>
           </tr>
           <% end %>
         </tbody>

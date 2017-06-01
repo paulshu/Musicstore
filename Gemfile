@@ -44,7 +44,8 @@ gem 'figaro'
 gem 'airbrake', '~> 5.4'
 gem 'ransack'
 gem 'seo_helper'
-
+gem 'rucaptcha'
+gem 'dalli'
 
 
 group :development, :test do

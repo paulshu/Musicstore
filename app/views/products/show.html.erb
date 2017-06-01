@@ -90,35 +90,19 @@
               <a href="#tab_default_1" data-toggle="tab">宝贝详情 </a>
             </li>
             <li>
-              <a href="#tab_default_2" data-toggle="tab">宝贝评价(<%= "#" %>) </a>
+              <a href="#tab_default_2" data-toggle="tab">宝贝评价 </a>
             </li>
           </ul>
         </div>
         <div class="tab-content">
           <div class="tab-pane active" id="tab_default_1">
              <p class="product-description"><%= @product.description %></p>
-             <p class="product-description2 text-center">产品展示</p>
-              <%#= image_tag(@product.photos[0].image.url) %>
               <% if @product.image.present? %>
                 <%= image_tag(@product.image.url, class: "thumbnail") %>
               <% else %>
                 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
               <% end %>
-             <p class="product-description2 text-center">产品细节</p>
-             <div class="row">
-               <div class="col-md-6 product-show-detail">
-                 <%= image_tag(@product.photos[1].image.medium.url) %>
-               </div>
-               <div class="col-md-6 product-show-detail">
-                 <%= image_tag(@product.photos[2].image.medium.url) %>
-               </div>
-               <div class="col-md-6 product-show-detail">
-                 <%= image_tag(@product.photos[3].image.medium.url) %>
-               </div>
-               <div class="col-md-6 product-show-detail">
-                 <%= image_tag(@product.photos[4].image.medium.url) %>
-               </div>
-             </div>
+
              <div class="faq">
                <p class="faq-title text-center">常见问题</p>
                <p class="question">使用什么快递发货？</p>
@@ -137,7 +121,7 @@
         </div>
 
          <div class="tab-pane" id="tab_default_2">
-           商品评价开发中！
+           <h3>商品评价开发中！</h3>
          </div>
       </div>
     </div>

@@ -20,10 +20,32 @@
       <%= f.input :price %>
     </div>
 
+    <br>
+    <% if @product.photos.present? %>
+      <span>小图</span> <br>
+      <% @product.photos.each do |p| %>
+        <%= image_tag p.image.thumb.url %><br>
+      <% end %>
+    <% end %>
+    <!-- 显示上传的5张产品展示图 -->
+
     <div class="group">
       <%= f.label :image %><br>
       <%= f.file_field :image, :multiple => true, name: "photos[image][]" %> ("请上传5张图片"）<br>
     </div>
+
+    <br>
+    <% if @product.image.present? %>
+      <span>详图</span> <br>
+        <%= image_tag(@product.image.url, class: "thumbnail") %><br>
+    <% end %>
+    <!-- 显示上传的1张产品详图 -->
+
+    <div class="group">
+      <%#= f.label 详图 %><br>
+     <%= f.input :image, as: :file %> ("请上传1张详图"）<br>
+    </div>
+
     <%= f.submit "Submit", data: {disable_with: "Submitting...", class: "btn btn-default"} %>
   <% end %>
 

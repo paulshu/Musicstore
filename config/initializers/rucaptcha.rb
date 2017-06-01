@@ -9,5 +9,19 @@ RuCaptcha.configure do
   # But RuCaptcha requirements cache_store not in [:null_store, :memory_store, :file_store]
   # 默认：会从 Rails 配置的 cache_store 里面读取相同的配置信息，用于存储验证码字符
   # 但如果是 [:null_store, :memory_store, :file_store] 之类的，你可以通过下面的配置项单独给 RuCaptcha 配置 cache_store
-  self.cache_store = :mem_cache_store
+  # self.cache_store = :mem_cache_store
+  if Rails.env.production?
+    config.cache_store = :dalli_store,
+                       (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                       {:username => ENV["MEMCACHIER_USERNAME"],
+                        :password => ENV["MEMCACHIER_PASSWORD"],
+                        :failover => true,
+                        :socket_timeout => 1.5,
+                        :socket_failure_delay => 0.2,
+                        :down_retry_delay => 60
+                       }
+                       #远端的生产生产环境
+  else
+    self.cache_store = :mem_cache_store #本地的开发或测试环境
+  end
 end

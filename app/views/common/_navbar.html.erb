@@ -1,13 +1,20 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header" style="color:#f06e1a">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- 增加折叠按钮，上面三行icon-bar为显示三条横线的按钮效果，myNavbar为链接，与下面的代码对应。 -->
             <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >Music Store </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <!-- id="myNavbar"与上面的代码对应，实现折叠功能 -->
             <ul class="nav navbar-nav">
               <li class="active">
                 <%= link_to("首页", products_path)%>
@@ -57,11 +64,20 @@
                 <li class="fl jh_navbar-listItem pr10 pl10">
                   <%= link_to(content_tag(:i, ' 登入',class: 'fa fa-sign-in'), new_user_session_path) %>
                 </li>
-                <!-- <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#login-modal">登录</a></li> -->
+
               <% else %>
+                <li>
+                  <% if current_user.avatar.present? %>
+                    <%= image_tag(current_user.avatar.thumb.url,style:"border-radius:50%;width:50px;height:50px;",class:"thumbnail")  %>
+                     <!-- 用户的可以自选头像 -->
+                  <% else %>
+                    <%= image_tag("http://ww1.sinaimg.cn/large/006tNbRwgy1ffzxufbo0lj3069069t8o.jpg",class:"thumbnail",style:"width:60px;height:60px;border-radius:50%;") %>
+                      <!-- 定义用户未选择头像时的默认头像 -->
+                  <% end %>
+                </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
                     Hi! <%= current_user.display_name %>
                     <b class="caret"></b>
                   </a>

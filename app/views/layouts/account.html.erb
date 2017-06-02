@@ -9,17 +9,22 @@
   </head>
 
   <body>
-    <div class="content">
-      <div class="container">
-        <%= render "common/navbar" %>
-        <%= render "common/flashes" %>
-
-          <div class="">
+    <%= render "common/navbar" %>
+    <%= render "common/flashes" %>
+    <div class="container">
+      <div class="row">
 
             <!-- 侧边分类选项栏 -->
             <div class="col-xs-2 nav-left-style">
               <hr>
               <h5>个人中心</h5>
+                <% if current_user.avatar.present? %>
+                  <%= image_tag(current_user.avatar.thumb.url,style:"border-radius:8;width:60px;height:60px;",class:"thumbnail")  %>
+                   <!-- 用户的可以自选头像 -->
+                <% else %>
+                  <%= image_tag("http://ww1.sinaimg.cn/large/006tNbRwgy1ffzxufbo0lj3069069t8o.jpg",class:"thumbnail",style:"width:60px;height:60px;border-radius:50%;") %>
+                    <!-- 定义用户未选择头像时的默认头像 -->
+                <% end %>
               <hr>
               <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
                 <li><%= link_to("我的订单", account_orders_path) %></li>
@@ -34,9 +39,7 @@
             </div>
 
           </div>
-      </div>
-    </div>
-
+        </div>
 
     <%= render "common/footer" %>
 

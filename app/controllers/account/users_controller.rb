@@ -2,7 +2,7 @@ class Account::UsersController < ApplicationController
 
   before_action :authenticate_user!
   layout "account"
-  
+
   def index
     @users = User.all
   end
@@ -24,7 +24,7 @@ class Account::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :avatar)
   end
 
 end

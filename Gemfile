@@ -48,6 +48,7 @@ gem 'rucaptcha'
 gem 'dalli'
 
 
+
 group :development, :test do
   gem 'pry'
   gem 'awesome_rails_console'

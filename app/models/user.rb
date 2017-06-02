@@ -17,6 +17,7 @@
 #  updated_at             :datetime         not null
 #  is_admin               :boolean          default(FALSE)
 #  name                   :string
+#  avatar                 :string
 #
 # Indexes
 #
@@ -31,6 +32,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
+  # 挂上selfie的uploader,用作用户上传头像
+
+  mount_uploader :avatar, AvatarUploader
 
    # ---收藏商品功能三方关系代码块---
   has_many :favorites
@@ -61,5 +65,6 @@ class User < ApplicationRecord
        self.email.split("@").first
     end
   end
+
 
 end

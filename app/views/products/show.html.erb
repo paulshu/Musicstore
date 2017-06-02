@@ -80,12 +80,14 @@
     </div>
   </div>
 
+
+
   <!-- Start of product description & reviews -->
-  <div class="col-md-8">
+  <!-- <div class="col-md-8">
     <div class="tabs" >
-      <div class="tabbable-panel">
+      <div class="tabbable-panel"> -->
         <!-- <div class="tabbable-line"> -->
-          <ul class="nav nav-tabs nav-justified ">
+          <!-- <ul class="nav nav-tabs nav-justified ">
             <li class="active">
               <a href="#tab_default_1" data-toggle="tab">宝贝详情 </a>
             </li>
@@ -123,6 +125,30 @@
          <div class="tab-pane" id="tab_default_2">
            <h3>商品评价开发中！</h3>
          </div>
+      </div>
+    </div> -->
+
+    <div class="productDetail border mt40">
+    <ul class="productDetail-tabList bg-gray clearfix">
+      <li class="productDetail-tabList-tab productDetail-tabList-activeTab fl pl50 pr50">
+        商品详情
+      </li>
+      <li class="productDetail-tabList-tab fl pl50 pr50">
+        商品评价
+      </li>
+    </ul>
+    <div class="productDetail-contentWrap">
+      <div class="productDetail-content pt20 tc pb20" style="display: block;">
+        <div class="productDetail-introImg">
+          <% if @prints.present? %>
+            <% @prints.each_with_index do |p, index| %>
+                <%= image_tag p.avatar.url %>
+            <% end %>
+          <% else %>
+              <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+          <% end %>
+        </div>
+
       </div>
     </div>
   </div>

@@ -62,7 +62,7 @@
               <% else %>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Hi!,<%= current_user.display_name %>
+                    Hi! <%= current_user.display_name %>
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
@@ -70,6 +70,8 @@
                       <li><%= link_to("后台管理", admin_products_path) %></li>
                     <% end %>
                     <li> <%= link_to("我的订单", account_orders_path) %></li>
+                    <li> <%= link_to("<span class='fa fa-user fa-lg'></span> 个人中心".html_safe, account_users_path(current_user)) %> </li>
+                      <li role="separator" class="divider"></li> <!-- divider是bootstrap dropdowns下的分隔功能，可将多个下拉菜单分开 -->
                     <li> <%= link_to(content_tag(:i, ' 退出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete)%></li>
                   </ul>
                 </li>
@@ -89,6 +91,7 @@
        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
          <div class="form-inputs">
            <%= f.input :email, label: "邮箱", required: false, autofocus: true %>
+           <%= f.input :name %>
            <%= f.input :password, label: "密码", required: false %>
            <%= f.input :remember_me, label: "记住我", as: :boolean if devise_mapping.rememberable? %>
          </div>

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders      #用户后台查看订单
     resources :favorites   #用户收藏，与用户有关
+    resources :users       #修改及显示用户名
   end
 
   root 'welcome#index'

@@ -45,8 +45,8 @@
       <%#= f.label 详图 %><br>
      <%= f.input :image, as: :file %> ("请上传1张详图"）<br>
     </div>
-
-    <%= f.submit "Submit", data: {disable_with: "Submitting...", class: "btn btn-default"} %>
+    <br>
+    <%= f.submit "Submit", data: {disable_with: "Submitting...", class: "btn btn-danger"} ,class: "btn btn-danger"%>
   <% end %>
 
   <script type="text/javascript">

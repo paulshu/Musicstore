@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>个人中心</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="container">
+        <%= render "common/navbar" %>
+        <%= render "common/flashes" %>
+
+          <div class="">
+
+            <!-- 侧边分类选项栏 -->
+            <div class="col-xs-2 nav-left-style">
+              <hr>
+              <h5>个人中心</h5>
+              <hr>
+              <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+                <li><%= link_to("我的订单", account_orders_path) %></li>
+                <li><%= link_to("我的信息", account_users_path) %></li>
+              </ul>
+              <hr>
+            </div>
+
+            <!-- 主内容 -->
+            <div class="col-xs-10">
+              <%= yield %>
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+
+    <%= render "common/footer" %>
+
+  </body>
+</html>

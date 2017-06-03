@@ -96,9 +96,10 @@
         </div>
         <div class="tab-content">
           <div class="tab-pane active" id="tab_default_1">
-             <p class="product-description"><%= @product.description %></p>
+             <p class="f20 ell fb"><%= @product.description %></p>
               <% if @product.image.present? %>
-                <%= image_tag(@product.image.url, class: "thumbnail") %>
+                <%= image_tag @product.image.url %>
+                <!-- <%= image_tag(@product.image.url, class: "thumbnail") %> -->
               <% else %>
                 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
               <% end %>

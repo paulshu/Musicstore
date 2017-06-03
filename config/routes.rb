@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users, controllers: {
     passwords: 'users/passwords',
     registrations: 'users/registrations',
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
 
 
   resources :products do
+    resources :reviews
     member do
       post :add_to_cart
       post :reduce_buying_quantity #增加和减少添加到购物车以前的购买数量

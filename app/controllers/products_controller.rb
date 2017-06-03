@@ -23,6 +23,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @photos = @product.photos.all
     @prints = @product.prints.all
+    @reviews = @product.reviews.all
+    if @reviews.blank?
+      @avg_review = 0
+    else
+      @avg_review = @reviews.average(:rating).round(2)
+    end
   end
 
   def add_to_cart

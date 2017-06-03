@@ -31,6 +31,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
+  has_many :reviews
+  ratyrate_rater
 
    # ---收藏商品功能三方关系代码块---
   has_many :favorites

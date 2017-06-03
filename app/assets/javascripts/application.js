@@ -20,6 +20,8 @@
 //= require jquery.countdown.min
 //= require wow.min
 //= require bootstrap/modal
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .
 
 // 首页轮播

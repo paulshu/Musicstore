@@ -15,7 +15,7 @@
 
       <ul class="show-photo-xsmall-box nav nav-tabs">
          <% @photos.each_with_index do |product,index| %>
-           <% if index <5 %>
+           <% if index < 5 %>
              <li><a href="#<%= index %>" data-toggle="tab"><%= image_tag product.image.small.url%></a></li>
            <% end %>
          <% end %>
@@ -24,7 +24,7 @@
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
     <% end %>
   </div>
-  <div class="col-md-6">
+
     <div class="intro-text fr">
       <h3 class="f20 ell fb"><%= @product.title %></h3>
       <p class="intro-text-desc"><%= @product.description %></p>
@@ -66,6 +66,8 @@
             <a href="javascript:;" class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red btn-disabled">已售完</a>
           <% end %>
         </p>
+      </div>
+    </div>
 
       <!-- <div id="getting-started"></div>
         <script type="text/javascript">
@@ -77,56 +79,7 @@
           });
         </script> -->
         <!-- 倒计时, <%= Time.zone.now %> 抓本地时区 -->
-    </div>
-  </div>
 
-
-
-  <!-- Start of product description & reviews -->
-  <!-- <div class="col-md-8">
-    <div class="tabs" >
-      <div class="tabbable-panel"> -->
-        <!-- <div class="tabbable-line"> -->
-          <!-- <ul class="nav nav-tabs nav-justified ">
-            <li class="active">
-              <a href="#tab_default_1" data-toggle="tab">宝贝详情 </a>
-            </li>
-            <li>
-              <a href="#tab_default_2" data-toggle="tab">宝贝评价 </a>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-content">
-          <div class="tab-pane active" id="tab_default_1">
-             <p class="product-description"><%= @product.description %></p>
-              <% if @product.image.present? %>
-                <%= image_tag(@product.image.url, class: "thumbnail") %>
-              <% else %>
-                <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-              <% end %>
-
-             <div class="faq">
-               <p class="faq-title text-center">常见问题</p>
-               <p class="question">使用什么快递发货？</p>
-               <p class="answer">伴客默认使用顺丰快递发货，配送范围覆盖全国大部分地区（港澳台地区除外）。</p>
-               <p class="question">如何申请退货？</p>
-               <p class="answer">
-                 1.自收到商品之日起7日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，预计1-5个工作日到账；<br />
-                 2.退货流程：<br />
-                 确认收货-申请退货-客服审核通过-用户寄回商品-仓库签收验货-退款审核-退款完成；<br />
-                 3.因品味伴客产生的退货，如质量问题，退货邮费由品味伴客承担，退款完成后钱款将沿原渠道返还。因客户个人原因产生的退货，购买和寄回运费由客户个人承担。<br />
-               </p>
-               <p class="question">如何开具发票？</p>
-               <p class="answer">如需开具普通发票，请在下单时联系客服办理，我们将虽货物一起快递给您；</p>
-             </div>
-          </div>
-        </div>
-
-         <div class="tab-pane" id="tab_default_2">
-           <h3>商品评价开发中！</h3>
-         </div>
-      </div>
-    </div> -->
 
     <div class="productDetail border mt40">
     <ul class="productDetail-tabList bg-gray clearfix">
@@ -134,10 +87,11 @@
         商品详情
       </li>
       <li class="productDetail-tabList-tab fl pl50 pr50">
-        商品评价
+        商品评价(<%= @product.reviews.count%>)
       </li>
     </ul>
     <div class="productDetail-contentWrap">
+
       <div class="productDetail-content pt20 tc pb20" style="display: block;">
         <div class="productDetail-introImg">
           <% if @prints.present? %>
@@ -149,6 +103,26 @@
           <% end %>
         </div>
 
+        <div class="productDetail-content pt30 tc pb20">
+          <div class="productDetail-evaluation w200 bc">
+            <div class="intro-text-count clearfix mt10">
+              打分: <%= rating_for @product, 'star', disable_after_rate: true %>
+              <!-- <div class="star-star" data-score= <%= @avg_reviews %> ></div> -->
+            </div>
+          </div>
+          <ul class="commentList mt70">
+            <% @reviews.each do |review| %>
+              <li class="commentList-item w700 pt10 pb10 bc clearfix">
+                <p class="fl content tl f12">
+                  <%= review.body  %><br>
+                </p>
+                <p class="fr name ell tr f12">
+                  <%= review.user.email %>
+                </p>
+              </li>
+            <% end %>
+          </ul>
+      </div>
       </div>
     </div>
   </div>

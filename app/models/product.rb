@@ -26,5 +26,7 @@ class Product < ApplicationRecord
   scope :recent, -> { order('created_at DESC') }
   has_many :prints
   accepts_nested_attributes_for :prints
+  has_many :reviews
+  ratyrate_rateable "star"
 
 end

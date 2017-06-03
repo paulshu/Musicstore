@@ -1,4 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def create
     build_resource(sign_up_params)
@@ -24,14 +25,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
       respond_with resource
     end
   end
-  
 
-  # before_filter :configure_permitted_parameters, if::devise_controller?
-  #
-  # protected
-  #
-  # def  configure_permitted_parameters
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-  # end
+
+
+ #    加用户头像和用户的定义，用devise需要这样写，最前面的before_filter也是
+  private
+
+  def  configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :avatar])
+  end
 
 end

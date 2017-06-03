@@ -23,10 +23,10 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     return cart
   end
-  # 加用户头像的定义，用devise需要这样写
-  def configure_permitted_parameters
-    added_params = [:name, :email, :password, :password_confirmation,:avatar]
-    devise_parameter_sanitizer.permit :account_update, keys: added_params
-  end
+  # 加用户头像的定义，用devise需要这样写， 此行暂时没有，没弄清楚
+  # def configure_permitted_parameters
+  #   added_params = [:name, :email, :password, :password_confirmation,:avatar]
+  #   devise_parameter_sanitizer.permit :account_update, keys: added_params
+  # end
 
 end

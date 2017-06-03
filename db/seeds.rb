@@ -37,7 +37,7 @@ Product.create!(
   description: "本款钢琴仍然采用德国优秀的防锈钢线,UP119QS采用新材料，新工艺进行限量生产，精细加工。",
   price: 4199,
   quantity: 105,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product1/d101.png")
 )
 
 Photo.create!(product_id:1, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product1/101.jpg"))
@@ -51,7 +51,7 @@ Product.create!(
   description: "初学专业演奏立式 黑色原声钢琴 供应商直送",
   price: 16800,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product2/details02.jpg") ##details
 )
 
 Photo.create!(product_id:2, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product2/201.jpg"))
@@ -67,7 +67,7 @@ Product.create!(
   description: "采用德国优秀的防锈钢线,限量生产，精细加工",
   price: 17300,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product3/details03.png") ##details
 )
 
 Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/301.jpg"))
@@ -82,7 +82,7 @@ Product.create!(
   description: "出色的品质，新颖的设计，超高的性价比",
   price: 569,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product4/details04.png") ##details
 )
 
 Photo.create!(product_id:4, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product4/401.jpg"))
@@ -101,7 +101,7 @@ Product.create!(
   description: "全新开发的音梁结构,带来您从未聆听过的FG吉他音色",
   price: 2290,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product5/details05.png") ##details
 )
 
 Photo.create!(product_id:5, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product5/501.jpg"))
@@ -117,7 +117,7 @@ Product.create!(
   description: "实木云杉作面板，桃花心木作背侧板，提供饱满的共鸣音色以及极好的性价比。",
   price: 1499,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product6/details06.png") ##details
 )
 
 Photo.create!(product_id:6, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product6/601.jpg"))
@@ -132,7 +132,7 @@ Product.create!(
   description: "经典LAS PAUL琴型电吉他，加强版，可切单",
   price: 3050,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product7/details07.png") ##details
 )
 
 Photo.create!(product_id:7, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product7/701.jpg"))
@@ -150,7 +150,7 @@ Product.create!(
   description: "欧洲精细做工,配备意大利正品aquila进口弦线，牛骨弦枕",
   price: 599,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/details08.png") ##details
 )
 
 Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/801.jpg"))
@@ -166,7 +166,7 @@ Product.create!(
   description: "芬兰原产",
   price: 3499,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/d901.jpg") ##details
 )
 
 Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/901.jpg"))
@@ -182,7 +182,7 @@ Product.create!(
   description: "准确传递出坚实的低频和清晰的高频，独特的可选择调整的声学空间设计",
   price: 4580,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/details10.png") ##details
 )
 
 Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1001.jpg"))
@@ -202,7 +202,7 @@ Product.create!(
   description: "进口欧料精选独板纯手工收藏级小提琴，精品中的精品",
   price: 6480,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product11/d1101.jpg") ##details
 )
 
 Photo.create!(product_id:11, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product11/1101.jpg"))
@@ -219,7 +219,7 @@ Product.create!(
   description: "国际大师监制，高级制琴师制作",
   price: 780,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/d1201.jpg") ##details
 )
 
 Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1201.jpg"))
@@ -236,7 +236,7 @@ Product.create!(
   description: "便于携带，打遍天下",
   price: 350,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product13/details13.png") ##details
 )
 
 Photo.create!(product_id:13, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product13/1301.jpg"))
@@ -252,7 +252,7 @@ Product.create!(
   description: "智能电鼓魔鲨成人专业电子鼓",
   price: 6380,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/d1401.jpg") ##details
 )
 
 Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1401.jpg"))
@@ -269,7 +269,7 @@ Product.create!(
   description: "高性价比OMEN系列，经典SOLO型琴体",
   price: 2090,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/details15.png") ##details
 )
 
 Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1501.jpg"))
@@ -287,7 +287,7 @@ Product.create!(
   description: "饱满的共鸣、优秀的演奏性、明快的外观，集众多魅力与一身的新CG系列",
   price: 1650,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/details16.png") ##details
 )
 
 Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1601.jpg"))
@@ -305,7 +305,7 @@ Product.create!(
   description: "完美的音色、震撼的共鸣效果和操控自如的弹奏舒适感",
   price: 4280,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/d1701.jpg") ##details
 )
 
 Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1701.jpg"))
@@ -320,7 +320,7 @@ Product.create!(
   description: "黑色 印尼原装进口",
   price: 5780,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/details18.png") ##details
 )
 
 Photo.create!(product_id:18, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/1801.jpg"))
@@ -335,7 +335,7 @@ Product.create!(
   description: "HIFI 发烧专用音箱",
   price: 1199,
   quantity: 0,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/d1901.jpg") ##details
 )
 
 Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1901.jpg"))
@@ -351,7 +351,7 @@ Product.create!(
   description: "大提琴乐器 (C038 4/4)",
   price: 3080,
   quantity: 10001,
-  # image: MiniMagick::Image.open("") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/d2001.jpg") ##details
 )
 
 Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2001.jpg"))

@@ -20,6 +20,9 @@
 //= require jquery.countdown.min
 //= require wow.min
 //= require bootstrap/modal
+//= require Event
+//= require Magnifier
+//= require jquery.raty
 //= require_tree .
 
 // 首页轮播
@@ -66,4 +69,144 @@ $(window).scroll(function () {
     $header.removeClass('header_fixed')
     $header.css({top: -80})
   }
+})
+
+// 详情菜单栏切换 //
+$(document).on('click', '.productDetail-tabList-tab', function () {
+  $(this).addClass('productDetail-tabList-activeTab').siblings().removeClass('productDetail-tabList-activeTab')
+  $('.productDetail-content').eq($(this).index()).show().siblings().hide()
+})
+// 用于切换商品详情和商品评价两个页面
+
+// 评论图片放大 //
+$('.comment-image').click(function () {
+  if ($(this).hasClass('comment-image-scale')) {
+    $(this).removeClass('comment-image-scale')
+  } else {
+    $(this).addClass('comment-image-scale')
+  }
+})
+
+// 投票 //
+$('.star-look').raty({
+  path: '/images/',
+    readOnly: true,
+    score: function() {
+    return $(this).attr('data-score');
+  }
+});
+
+$('.star-price').raty({
+  path: '/images/',
+    readOnly: true,
+    score: function() {
+    return $(this).attr('data-score');
+  }
+});
+
+$('.star-rating').raty({
+  path: '/images/',
+  readOnly: true,
+  score: function() {
+    return $(this).attr('data-score');
+  }
+});
+
+$('#star-rating').raty({
+  path: '/images/',
+  scoreName: 'review[rating]'
+});
+
+$('#star-look').raty({
+  path: '/images/',
+  scoreName: 'review[look]'
+});
+
+$('#star-price').raty({
+  path: '/images/',
+  scoreName: 'review[price]'
+});
+
+
+// 其中review需要与自己建的评价页面关键字对应，如你建的是post就用post, 这里用review
+
+$('#star-rating img').eq(0).trigger('click')
+$('#star-look img').eq(0).trigger('click')
+$('#star-price img').eq(0).trigger('click')
+// 强制必须选一颗星
+
+
+// 放大镜 //
+$('#preview').css('visibility', 'hidden')
+var evt = new Event(),
+    m = new Magnifier(evt);
+m.attach({
+    thumb: '#thumb',
+    large: $('.intro-preview-activeItem img').attr('src'),
+    largeWrapper: 'preview',
+    zoom: 2
+})
+
+// 预览图选择  //
+$(document).on('mouseover', '.intro-preview-item', function () {
+  var src = $(this).find('img').attr('src')
+  $('.intro-bigPic img').attr('src', src)
+    $('#thumb-lens').css('background-image', 'url(' + src + ')')
+  $(this).addClass('intro-preview-activeItem').siblings().removeClass('intro-preview-activeItem')
+  m.attach({
+        thumb: '#thumb',
+        large: src,
+        largeWrapper: 'preview'
+  })
+})
+
+$('.intro-preview-activeItem').trigger('mouseover')
+$(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
+    $('#preview').css('visibility', 'visible')
+})
+$(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
+    $('#preview').css('visibility', 'hidden')
+})
+
+
+
+
+/* carousel effect  */
+
+// $('.carousel').carousel()
+
+/* scroll effect  */
+(function ($) {
+  $(document).ready(function(){
+    $('.index').hide();
+    $(function () {
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop() > 1000) {
+                $('.index').fadeIn();
+            } else {
+                $('.index').fadeOut();
+            }
+        });
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.animated').fadeOut();
+            } else {
+                $('.animated').fadeIn();
+            }
+        });
+    });
+
+});
+  }(jQuery));
+
+
+
+/* index effect */
+
+$(document).on('click', '.index', function () {
+  $('body').animate({'scrollTop': 0}, 700)
 })

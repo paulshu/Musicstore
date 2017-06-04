@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require animate.min.css
+ *= require magnifier.css
  *= require_tree .
  *= require_self
  */
@@ -159,6 +160,33 @@ a:hover {
   }
 }
 
+/*「大按钮」和「小按钮」*/
+.g-btn {
+  display: block;
+  width: 178px;
+  height: 48px;
+  line-height: 45px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.s-btn {
+  display: block;
+  width: 84px;
+  height: 30px;
+  padding: 0px 0px;
+  line-height: 29px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.s-btn:hover, .g-btn:hover {
+  color: #fff;
+}
 
 /*===== 產品列表內容設置 以下为第二方案=====*/
 .product-content {
@@ -211,30 +239,6 @@ a:hover {
 }
 
 
-// product/show  //
-.show-picture {
-  margin-top:30px;
-}
-.show-photo-xsmall-box{
-  height:80px;
-  width:400px;
-}
-.show-photo-xsmall-box.nav-tabs {
-  margin-top: 15px;
-}
-
-.show-photo-xsmall-box.nav-tabs li {
-  width: 18%;
-  margin-right: 2.5%;
-}
-.show-photo-xsmall-box.nav-tabs li a {
-  padding: 0;
-  margin: 0;
-  border: 1px solid #ddd;
-}
-.show-photo-xsmall-box.nav-tabs li:last-of-type {
-  margin-right: 0;
-}
 
 /*固定在顶部的头部*/
 .header_fixed {

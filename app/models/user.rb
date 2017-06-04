@@ -32,13 +32,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :orders
-  # 挂上selfie的uploader,用作用户上传头像
+  has_many :reviews   # 用户评论
+  # 挂上avatar的uploader,用作用户上传头像
 
   mount_uploader :avatar, AvatarUploader
 
    # ---收藏商品功能三方关系代码块---
   has_many :favorites
   has_many :favorite_products, through: :favorites, source: :product
+
 
   def is_fans_of?(product) #fans 与 product.rb中的has_many对应，可以用不同的词
    favorite_products.include?(product)

@@ -23,6 +23,9 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
+  has_many :reviews  #产品含有多条评价信息
   scope :recent, -> { order('created_at DESC') }
+
+
 
 end

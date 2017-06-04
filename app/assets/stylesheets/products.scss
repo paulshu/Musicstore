@@ -170,129 +170,28 @@
 
 
 
-/* product show page product description */
-
-.show-page .col-md-8 {
-  padding: 0;
-  p.product-description{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: #666;
-    border-bottom: 1px dotted #dedede;
-  }
-  p.product-description2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #666;
-    font-size: 15px;
-  }
-  img {
-    width: 100%;
-    -webkit-animation-name: opacity;
-            animation-name: opacity;
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s;
-  }
-  p.faq-title{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #666;
-    font-size: 15px;
-  }
-  p.question{
-    color:#666;
-  }
-  p.answer{
-    color: #999;
-    margin-bottom: 30px;
-  }
-  .faq{
-    border-top: 1px dotted #dedede;
-    margin-top: 20px;
-    font-weight: 200;
-  }
+/*商品详情*/
+.productDetail-tabList {
+	border-bottom: 1px solid #D8D8D8;
 }
 
-.tab-content #tab_default_1 {
-
-  .product-show-detail{
-    border: 1px solid #dedede;
-    padding-left: 0px;
-    padding-right: 0px;
-    img {
-      width: 600;
-      -webkit-animation-name: opacity;
-              animation-name: opacity;
-      -webkit-animation-duration: .3s;
-              animation-duration: .3s;
-    }
-  }
-
+.productDetail-tabList-tab {
+	cursor: pointer;
+	height: 35px;
+	line-height: 35px;
+	border-right: 1px solid #D8D8D8;
 }
 
-.tabs {
-  background-color:#fff;
-  border: 1px solid #ddd;
-  margin-right: 10px;
-  margin-bottom: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
+.productDetail-tabList-activeTab {
+	background: #fff;
 }
 
-.tabbable-line > .nav-tabs {
-  border: none;
-  margin: 0px;
+.productDetail-content {
+	display: none;
 }
-.tabbable-line > .nav-tabs > li {
-  margin-right: 2px;
-}
-.tabbable-line > .nav-tabs > li > a {
-  border: 0;
-  margin-right: 0;
-  color: #737373;
-}
-.tabbable-line > .nav-tabs > li > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid rgb(245,190,126);
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-  border: 0;
-  background: none !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid rgb(245,190,126);
-  position: relative;
-}
-.tabbable-line > .nav-tabs > li.active:hover {
-  border:none;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-  border: 0;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
-  color: #404040;
-}
-.tabbable-line > .tab-content {
-  margin-top: -3px;
-  background-color: #fff;
-  border: 0;
-  border-top: 1px solid #eee;
-  padding: 15px 0;
-}
-.tabbable-line > .nav-tabs>li.active>a, .tabbable-line > .nav-tabs>li.active>a:focus, .tabbable-line > .nav-tabs>li.active>a:hover {
-border: 0;
-border-bottom: 0px solid rgb(245,190,126);
+
+.productDetail-content .productDetail-introImg img {
+	width: 600px;
 }
 
 /*轮播图*/

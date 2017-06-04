@@ -116,6 +116,14 @@
   margin-left: 260px;
 }
 
+.intro-text-share {
+	// height: 50px;
+	// line-height: 50px;
+  float: left;
+  margin-top: -25px;
+  margin-left: 460px;
+}
+
 .intro-text-btn {
 	display: block;
 	width: 178px;
@@ -424,3 +432,8 @@ border-bottom: 0px solid rgb(245,190,126);
 border: 0;
 border-bottom: 0px solid rgb(245,190,126);
 }
+
+//分享到社交平台
+.right-box {
+    float: right;
+  }

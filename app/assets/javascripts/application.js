@@ -20,6 +20,8 @@
 //= require jquery.countdown.min
 //= require wow.min
 //= require bootstrap/modal
+//= require social-share-button
+//= require social-share-button/wechat
 //= require_tree .
 
 // 首页轮播

@@ -54,7 +54,16 @@
             <i class="fa fa-star-o"></i><%= link_to("关注商品", favorite_product_path(@product), method: :post) %>
            <% end %>
          </div>
+
+         <!-- 分享到社交平台 -->
+          <div class='intro-text-share'>
+            <%= social_share_button_tag(@product.title, :allow_sites => %w(facebook twitter google_plus wechat weibo douban)) %>
+          </div>
+          
        </p>
+
+
+
 
         <p class="intro-text-btnWrap">
           <% if @product.quantity.present? && @product.quantity > 0 %>

@@ -82,7 +82,38 @@
 }
 
 
-//商品详细
+//**** 商品详细 *****//
+
+.location {
+	line-height: 30px;
+	padding-bottom: 3px;
+}
+
+.intro-bigPic {
+	width: 420px;
+	height: 420px;
+	img {
+		width: 100%;
+	}
+}
+
+.intro-preview {
+	margin-top: 15px;
+	.intro-preview-item {
+		padding: 1px;
+		margin-right: 13px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			width: 70px;
+			height: 70px;
+		}
+	}
+	.intro-preview-activeItem {
+		border-color: #DB3652;
+	}
+}
+
 .intro-text {
 	width: 744px;
 	h3 {
@@ -189,7 +220,7 @@
     padding-left: 0px;
     padding-right: 0px;
     img {
-      width: 100%;
+      width: 600;
       -webkit-animation-name: opacity;
               animation-name: opacity;
       -webkit-animation-duration: .3s;
@@ -311,6 +342,8 @@ border-bottom: 0px solid rgb(245,190,126);
 
 .show-page .col-md-8 {
   padding: 0;
+  margin-top: 20px;
+  margin-left: 10px;
   p.product-description{
     padding-top: 30px;
     padding-bottom: 30px;
@@ -324,7 +357,7 @@ border-bottom: 0px solid rgb(245,190,126);
     font-size: 15px;
   }
   img {
-    //width: 100%;
+    width: 200px;
     -webkit-animation-name: opacity;
             animation-name: opacity;
     -webkit-animation-duration: .3s;

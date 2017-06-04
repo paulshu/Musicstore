@@ -1,30 +1,40 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.photos.present? %>
-      <div class="tab-content show-picture">
-        <% @photos.each_with_index do |product,index| %>
-          <% if index < 5 %>
-          <!-- 用each_with_index记录，第一张(index ==0)時，显示大图，其余显示小图(thumb) -->
-            <div class= "tab-pane <%= render_active(index) %>" id="<%= index %>">
-              <!-- 为达到点击轮播效果，采用了rails内建的tap pane 选项卡窗格的写法 -->
-              <%= image_tag product.image.medium.url %>
-            </div>
+<div class="detail mt20 w1200 bc pb50">
+  <p class="location col-gray"><%= link_to("首页", products_path)%> >
+    <% Category.all.each do |category| %>
+      <% if @product.category.name == category.name %>
+        <%= link_to category.name, products_path(category: category.name), class: "link" %>
+      <% end %>
+    <% end %>
+    > <%= @product.title %></p>
+  <div class="intro clearfix">
+    <div class="cover fl">
+      <div class="intro-bigPic border pr">
+        <div class="magnifier-preview border" id="preview"></div>
+          <% if @product.photos.present? %>
+            <a class="magnifier-thumb-wrapper" href="javascript:;">
+              <img id="thumb" src="<%= @photos.first.image.medium.url %>"
+              data-large-img-wrapper="preview"
+              data-large-img-url="<%= @photos.first.image.medium.url %>">
+            </a>
+          <!-- 参考放大镜出处  http://mark-rolich.github.io/Magnifier.js/ -->
+          <% end %>
+        </div>
+      <ul class="intro-preview clearfix">
+        <% if @product.photos.present? %>
+         <% @photos.each_with_index do |product,index| %>
+           <% if index == 0 %>
+              <li class="border intro-preview-item intro-preview-activeItem fl">
+            <% else %>
+              <li class="border intro-preview-item fl">
+            <% end %>
+            <% if index < 5 %>
+             <%= image_tag product.image.small.url%>
+            <% end %>
+            </li>
           <% end %>
         <% end %>
-      </div>
-
-      <ul class="show-photo-xsmall-box nav nav-tabs">
-         <% @photos.each_with_index do |product,index| %>
-           <% if index <5 %>
-             <li><a href="#<%= index %>" data-toggle="tab"><%= image_tag product.image.small.url%></a></li>
-           <% end %>
-         <% end %>
        </ul>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
+     </div>
     <div class="intro-text fr">
       <h3 class="f20 ell fb"><%= @product.title %></h3>
       <p class="intro-text-desc"><%= @product.description %></p>
@@ -49,9 +59,11 @@
 
         <div class="intro-text-favorite">
            <% if current_user && current_user.is_fans_of?(@product) %>
-             <i class="fa fa-star"></i><%= link_to("已关注（点击取消关注）", unfavorite_product_path(@product), method: :post) %>
+             <i class="fa fa-star"></i><%= link_to("已关注（点击取消关注）", unfavorite_product_path(@product), method: :post ) %>
+             <%= @product.fans.count %>人气
            <% else %>
             <i class="fa fa-star-o"></i><%= link_to("关注商品", favorite_product_path(@product), method: :post) %>
+             <%= @product.fans.count %>人气
            <% end %>
          </div>
        </p>
@@ -66,25 +78,17 @@
             <a href="javascript:;" class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red btn-disabled">已售完</a>
           <% end %>
         </p>
-
-      <!-- <div id="getting-started"></div>
-        <script type="text/javascript">
-          $("#getting-started")
-          .countdown("<%= Time.zone.now + 2.days %>", function(event) {
-            $(this).text(
-              event.strftime('%D days %H:%M:%S')
-            );
-          });
-        </script> -->
-        <!-- 倒计时, <%= Time.zone.now %> 抓本地时区 -->
+      </div>
     </div>
   </div>
 
   <!-- Start of product description & reviews -->
-  <div class="col-md-8">
+
+<div class="show-page">
+  <!-- <div class="col-md-8"> -->
     <div class="tabs" >
       <div class="tabbable-panel">
-        <!-- <div class="tabbable-line"> -->
+        <div class="tabbable-line">
           <ul class="nav nav-tabs nav-justified ">
             <li class="active">
               <a href="#tab_default_1" data-toggle="tab">宝贝详情 </a>
@@ -97,33 +101,34 @@
         <div class="tab-content">
           <div class="tab-pane active" id="tab_default_1">
              <p class="f20 ell fb"><%= @product.description %></p>
-              <% if @product.image.present? %>
+             <div class="row">
+               <% if @product.image.present? %>
                 <%= image_tag @product.image.url %>
                 <!-- <%= image_tag(@product.image.url, class: "thumbnail") %> -->
-              <% else %>
+               <% else %>
                 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-              <% end %>
+               <% end %>
+              </div>
+               <div class="faq">
+                 <p class="faq-title text-center">常见问题</p>
+                 <p class="question">使用什么快递发货？</p>
+                 <p class="answer">伴客默认使用顺丰快递发货，配送范围覆盖全国大部分地区（港澳台地区除外）。</p>
+                 <p class="question">如何申请退货？</p>
+                 <p class="answer">
+                   1.自收到商品之日起7日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，预计1-5个工作日到账；<br />
+                   2.退货流程：<br />
+                   确认收货-申请退货-客服审核通过-用户寄回商品-仓库签收验货-退款审核-退款完成；<br />
+                   3.因品味伴客产生的退货，如质量问题，退货邮费由品味伴客承担，退款完成后钱款将沿原渠道返还。因客户个人原因产生的退货，购买和寄回运费由客户个人承担。<br />
+                 </p>
+                 <p class="question">如何开具发票？</p>
+                 <p class="answer">如需开具普通发票，请在下单时联系客服办理，我们将虽货物一起快递给您；</p>
+               </div>
+            </div>
 
-             <div class="faq">
-               <p class="faq-title text-center">常见问题</p>
-               <p class="question">使用什么快递发货？</p>
-               <p class="answer">伴客默认使用顺丰快递发货，配送范围覆盖全国大部分地区（港澳台地区除外）。</p>
-               <p class="question">如何申请退货？</p>
-               <p class="answer">
-                 1.自收到商品之日起7日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，预计1-5个工作日到账；<br />
-                 2.退货流程：<br />
-                 确认收货-申请退货-客服审核通过-用户寄回商品-仓库签收验货-退款审核-退款完成；<br />
-                 3.因品味伴客产生的退货，如质量问题，退货邮费由品味伴客承担，退款完成后钱款将沿原渠道返还。因客户个人原因产生的退货，购买和寄回运费由客户个人承担。<br />
-               </p>
-               <p class="question">如何开具发票？</p>
-               <p class="answer">如需开具普通发票，请在下单时联系客服办理，我们将虽货物一起快递给您；</p>
-             </div>
-          </div>
+           <div class="tab-pane" id="tab_default_2">
+             <h3>商品评价开发中！</h3>
+           </div>
         </div>
-
-         <div class="tab-pane" id="tab_default_2">
-           <h3>商品评价开发中！</h3>
-         </div>
       </div>
     </div>
   </div>

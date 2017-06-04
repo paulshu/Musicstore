@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require animate.min.css
+ *= require magnifier.css
  *= require_tree .
  *= require_self
  */
@@ -393,4 +394,3 @@ a:hover {
      width: 26px; //定制图片宽度
      height: 26px; //定制图片高度
  }
- 

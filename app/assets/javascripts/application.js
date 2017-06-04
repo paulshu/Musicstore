@@ -89,7 +89,7 @@ $('.comment-image').click(function () {
 
 // 投票 //
 $('.star-look').raty({
-  path: '/ratyrate/',
+  path: '/images/',
     readOnly: true,
     score: function() {
     return $(this).attr('data-score');
@@ -97,7 +97,7 @@ $('.star-look').raty({
 });
 
 $('.star-price').raty({
-  path: '/ratyrate/',
+  path: '/images/',
     readOnly: true,
     score: function() {
     return $(this).attr('data-score');
@@ -105,31 +105,36 @@ $('.star-price').raty({
 });
 
 $('.star-rating').raty({
-  path: '/ratyrate/',
-    readOnly: true,
-    score: function() {
+  path: '/images/',
+  readOnly: true,
+  score: function() {
     return $(this).attr('data-score');
   }
 });
 
 $('#star-rating').raty({
-  path: '/ratyrate/',
-  scoreName: 'post[rating]'
+  path: '/images/',
+  scoreName: 'review[rating]'
 });
 
 $('#star-look').raty({
-  path: '/ratyrate/',
-  scoreName: 'post[look]'
+  path: '/images/',
+  scoreName: 'review[look]'
 });
 
 $('#star-price').raty({
-  path: '/ratyrate/',
-  scoreName: 'post[price]'
+  path: '/images/',
+  scoreName: 'review[price]'
 });
+
+
+// 其中review需要与自己建的评价页面关键字对应，如你建的是post就用post, 这里用review
 
 $('#star-rating img').eq(0).trigger('click')
 $('#star-look img').eq(0).trigger('click')
 $('#star-price img').eq(0).trigger('click')
+// 强制必须选一颗星
+
 
 // 放大镜 //
 $('#preview').css('visibility', 'hidden')
@@ -161,4 +166,47 @@ $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
 })
 $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
     $('#preview').css('visibility', 'hidden')
+})
+
+
+
+
+/* carousel effect  */
+
+// $('.carousel').carousel()
+
+/* scroll effect  */
+(function ($) {
+  $(document).ready(function(){
+    $('.index').hide();
+    $(function () {
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop() > 1000) {
+                $('.index').fadeIn();
+            } else {
+                $('.index').fadeOut();
+            }
+        });
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.animated').fadeOut();
+            } else {
+                $('.animated').fadeIn();
+            }
+        });
+    });
+
+});
+  }(jQuery));
+
+
+
+/* index effect */
+
+$(document).on('click', '.index', function () {
+  $('body').animate({'scrollTop': 0}, 700)
 })

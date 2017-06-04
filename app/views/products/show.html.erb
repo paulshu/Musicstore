@@ -1,4 +1,4 @@
-<div class="detail mt20 col-md-12 bc pb50">
+<div class="detail mt20 w1200 bc pb50">
   <p class="location col-gray"><%= link_to("首页", products_path)%> >
     <% Category.all.each do |category| %>
       <% if @product.category.name == category.name %>
@@ -6,7 +6,7 @@
       <% end %>
     <% end %>
     > <%= @product.title %></p>
-  <div class="intro clearfix col-md-12">
+  <div class="intro clearfix">
     <div class="cover fl">
       <div class="intro-bigPic border pr">
         <div class="magnifier-preview border" id="preview"></div>
@@ -35,8 +35,8 @@
         <% end %>
        </ul>
      </div>
-    <div class="intro-text fr col-md-7">
-      <h4 class="f20 ell fb"><%= @product.title %></h4>
+    <div class="intro-text fr">
+      <h3 class="f20 ell fb"><%= @product.title %></h3>
       <p class="intro-text-desc"><%= @product.description %></p>
       <p class="intro-text-value bg-gray">
         <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
@@ -80,17 +80,51 @@
         </p>
       </div>
     </div>
+
+    <script>
+    // 放大镜 //
+    $('#preview').css('visibility', 'hidden')
+    var evt = new Event(),
+        m = new Magnifier(evt);
+    m.attach({
+        thumb: '#thumb',
+        large: $('.intro-preview-activeItem img').attr('src'),
+        largeWrapper: 'preview',
+        zoom: 2
+    })
+
+    // 预览图选择  //
+    // $(document).on('mouseover', '.intro-preview-item', function () {
+    //   var src = $(this).find('img').attr('src')
+    //   $('.intro-bigPic img').attr('src', src)
+    //     $('#thumb-lens').css('background-image', 'url(' + src + ')')
+    //   $(this).addClass('intro-preview-activeItem').siblings().removeClass('intro-preview-activeItem')
+    //   m.attach({
+    //         thumb: '#thumb',
+    //         large: src,
+    //         largeWrapper: 'preview'
+    //   })
+    // })
+    //这段代码会让图片变模糊
+    $('.intro-preview-activeItem').trigger('mouseover')
+    $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
+        $('#preview').css('visibility', 'visible')
+    })
+    $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
+        $('#preview').css('visibility', 'hidden')
+    })
+
+    </script>
 <!-- </div> -->
 
   <!-- Start of product description & reviews -->
-<div class="detail mb20 col-md-7">
   <div class="productDetail border mt40">
     <ul class="productDetail-tabList bg-gray clearfix">
       <li class="productDetail-tabList-tab productDetail-tabList-activeTab fl pl50 pr50">
         商品详情
       </li>
       <li class="productDetail-tabList-tab fl pl50 pr50">
-        商品评价(<%= @product.fans.count%>)
+        商品评价(<%= @product.reviews.count%>)
       </li>
     </ul>
   <div class="productDetail-contentWrap">
@@ -103,37 +137,124 @@
          <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "commentImage border") %>
         <% end %>
       </div>
-      <br>
-      <div class="faq w600 text-left pl20">
-        <p class="faq-title text-center">常见问题</p>
-        <p class="question">使用什么快递发货？</p>
-        <p class="answer">伴客默认使用顺丰快递发货，配送范围覆盖全国大部分地区（港澳台地区除外）。</p>
-        <p class="question">如何申请退货？</p>
-        <p class="answer">
-          1.自收到商品之日起7日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，预计1-5个工作日到账；<br />
-          2.退货流程：<br />
-          确认收货-申请退货-客服审核通过-用户寄回商品-仓库签收验货-退款审核-退款完成；<br />
-          3.因品味伴客产生的退货，如质量问题，退货邮费由品味伴客承担，退款完成后钱款将沿原渠道返还。因客户个人原因产生的退货，购买和寄回运费由客户个人承担。<br />
-        </p>
-        <p class="question">如何开具发票？</p>
-        <p class="answer">如需开具普通发票，请在下单时联系客服办理，我们将虽货物一起快递给您；</p>
-      </div>
     </div>
 
     <div class="productDetail-content pt30 tc pb20">
-      <p class="mt20 mb20"><%= @product.description %></p>
-
-  </div>
-</div>
-</div>
-
-<div class="detail mb20 col-md-4">
-  <div class="productDetail border mt40">
-    <% if @product.image.present? %>
-     <%= image_tag @product.image.medium.url, class: "commentImage border" %>
-    <% else %>
-     <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "commentImage border") %>
-    <% end %>
+      <div class="productDetail-evaluation w200 bc">
+        <div class="intro-text-count clearfix mt10">
+          <div class="fl mr10">音效: </div>
+          <div class="star-rating" data-score= <%= @avg_post %> ></div>
+        </div>
+        <div class="intro-text-count clearfix mt10">
+          <div class="fl mr10">外观: </div>
+          <div class="star-look" data-score= <%= @avg_look %> ></div>
+        </div>
+        <div class="intro-text-count clearfix mt10">
+          <div class="fl mr10">价格: </div>
+          <div class="star-price" data-score= <%= @avg_price %> ></div>
+        </div>
+      </div>
+      <ul class="commentList mt70 ">
+        <% @reviews.each do |review| %>
+          <li class="commentList-item w700 pt10 pb10 bc clearfix">
+            <p class="fl content tl f12">
+              <%=  review.content  %><br>
+              <% if review.graphics.present? %>
+                <% review.graphics.each_with_index do |product, index| %>
+                    <%= image_tag product.image.medium.url, class: "commentImage border" %>
+                <% end %>
+              <% end %>
+              <br>
+              <img src="https://ww2.sinaimg.cn/large/006tKfTcgy1fczn4z618nj301a010mwz.jpg" class="commentBigImage">
+            </p>
+            <p class="fr name ell tr f12">
+              <%= review.user.display_name %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+      <p class="comment-say mt20 mb20">
+        <%= link_to("我的感受", new_product_review_path(@product),
+            :class => "g-btn pl15 pr15 mt20 ml20 tc col-red f20 bg-red bc") %>
+      </p>
     </div>
   </div>
+</div>
+</div>
+<script>
+  $('.star-look').raty({
+    path: '/images/',
+      readOnly: true,
+      score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+
+  $('.star-price').raty({
+    path: '/images/',
+      readOnly: true,
+      score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+
+  $('.star-rating').raty({
+    path: '/images/',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+
+  $('#star-rating').raty({
+    path: '/images/',
+    scoreName: 'review[rating]'
+  });
+
+  $('#star-look').raty({
+    path: '/images/',
+    scoreName: 'review[look]'
+  });
+
+  $('#star-price').raty({
+    path: '/images/',
+    scoreName: 'review[price]'
+  });
+</script>
+
+<div class="recommend col-gray w1200 mt20 mb20 bc ">
+   <h4 style="padding-top:10px;">猜您喜欢的宝贝</h4>
+   <hr/>
+   <div>
+     <ul class="productList clearfix">
+     <% Product.limit(5).sort_by{|product| -product.fans.count}.each do |product| %>
+         <li style="list-style-type:none;", class="productList-item">
+           <!-- style="list-style-type:none;" 可以支掉列表中的小圆点 -->
+           <p class="productList-item-pic w200 h200">
+             <%= link_to product_path(product) do %>
+               <% if product.photos.present? %>
+                 <%= image_tag(product.photos[0].image.thumb.url) %>
+               <% else %>
+                 <%= image_tag("http://placehold.it/418x418&text=No Pic") %>
+               <% end %>
+             <% end %>
+           </p><br>
+           <p class="productList-item-price fb col-red f18 mt10">￥<%= product.price %></p>
+           <p class="productList-item-name ell">
+             <%= link_to product_path(product) do %>
+                <%= product.title %>
+             <% end %>
+           </p>
+           <% if product.quantity == 0 %>
+             <p class="productList-item-sellout f20 tc">已售完</p>
+           <% end %>
+         </li>
+           <% end %>
+       </ul>
+  </div>
+</div>
+
+<!-- 页面到底部返回 -->
+<div class="index">
+   <i class="fa fa-arrow-up"></i>
 </div>

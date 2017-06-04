@@ -38,7 +38,7 @@ Rails.application.routes.draw do
     collection do
       get :search          #搜索功能
     end
-    resources :reviews
+    resources :reviews     #用来做商品评论
   end
   resources :carts do      #购物车明细
     collection do

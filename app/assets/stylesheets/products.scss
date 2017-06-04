@@ -93,8 +93,8 @@
 	width: 420px;
 	height: 420px;
 	img {
-		width: 420px;
-    height: 420px;
+		// width: 420px;
+    // height: 420px;
     width: 100%;
 	}
 }
@@ -119,21 +119,20 @@
 .intro-text {
 	width: 744px;
 	h3 {
-		margin-top: 100px;
+		margin-top: 0px;
 		line-height: 30px;
-    font-size: 30px;
+    font-size: 25px;
 	}
 }
 
 .intro-text-desc {
-	margin-top: 10px;
+	margin-top: 7px;
   font-size: 14px;
 }
 
 .intro-text-value {
 	height: 60px;
 	line-height: 60px;
-  line-height: 60px;
 }
 
 .intro-text-service {
@@ -170,6 +169,67 @@
 	margin-top: 15px;
 }
 
+/*  评论 */
+.commentList-item {
+	width: 570px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.commentList-item .content {
+	width: 420px;
+}
+
+.commentList-item .content .commentImage {
+	width: 50px;
+  height: 50px;
+	padding: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	&.selected {
+		border: 1px solid #d32048;
+	}
+}
+
+.commentList-item .commentBigImage {
+	margin-top: 20px;
+	width: 300px;
+	display: none;
+}
+
+.commentList-item .name {
+	width: 180px;
+}
+
+.comment-say a {
+	margin-right: auto;
+	margin-left: auto;
+	color: #fff;
+	&:hover {
+		color: #fff;
+	}
+}
+
+.comment-userName {
+	margin-top: 2px;
+}
+
+.comment-avatar {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+
+.comment-image img {
+	width: 70px;
+}
+
+.comment-image-scale img {
+	width: 220px;
+}
+
+.productDetail-evaluation {
+	letter-spacing: 5px;
+}
 
 
 /*商品详情*/
@@ -193,7 +253,7 @@
 }
 
 .productDetail-content .productDetail-introImg img {
-	width: 600px;
+	width: 700px;
 }
 
 /*轮播图*/

@@ -171,7 +171,7 @@ a:hover {
   line-height: 45px;
   border: 1px solid #d32048;
   font-family: "Microsoft Yahei",simhei;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
 }
 
@@ -242,30 +242,6 @@ a:hover {
 }
 
 
-// product/show  //
-.show-picture {
-  margin-top:30px;
-}
-.show-photo-xsmall-box{
-  height:80px;
-  width:400px;
-}
-.show-photo-xsmall-box.nav-tabs {
-  margin-top: 15px;
-}
-
-.show-photo-xsmall-box.nav-tabs li {
-  width: 18%;
-  margin-right: 2.5%;
-}
-.show-photo-xsmall-box.nav-tabs li a {
-  padding: 0;
-  margin: 0;
-  border: 1px solid #ddd;
-}
-.show-photo-xsmall-box.nav-tabs li:last-of-type {
-  margin-right: 0;
-}
 
 /*固定在顶部的头部*/
 .header_fixed {

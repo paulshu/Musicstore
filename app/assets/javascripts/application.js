@@ -23,7 +23,6 @@
 //= require Event
 //= require Magnifier
 //= require jquery.raty
-//= require ratyrate
 //= require_tree .
 
 // 首页轮播

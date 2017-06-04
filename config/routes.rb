@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users, controllers: {
     passwords: 'users/passwords',
     registrations: 'users/registrations',
@@ -39,6 +38,7 @@ Rails.application.routes.draw do
     collection do
       get :search          #搜索功能
     end
+    resources :reviews
   end
   resources :carts do      #购物车明细
     collection do

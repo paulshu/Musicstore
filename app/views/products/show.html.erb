@@ -1,4 +1,4 @@
-<div class="detail mt20 w1200 bc pb50">
+<div class="detail mt20 col-md-12 bc pb50">
   <p class="location col-gray"><%= link_to("首页", products_path)%> >
     <% Category.all.each do |category| %>
       <% if @product.category.name == category.name %>
@@ -36,7 +36,7 @@
        </ul>
      </div>
     <div class="intro-text fr col-md-7">
-      <h3 class="f20 ell fb"><%= @product.title %></h3>
+      <h4 class="f20 ell fb"><%= @product.title %></h4>
       <p class="intro-text-desc"><%= @product.description %></p>
       <p class="intro-text-value bg-gray">
         <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
@@ -122,10 +122,7 @@
 
     <div class="productDetail-content pt30 tc pb20">
       <p class="mt20 mb20"><%= @product.description %></p>
-      味道 : <%= rating_for @product, 'speed', disable_after_rate: true, star_path: '/images/ratyrate' %>
-      外观 : <%= rating_for @product, 'engine', disable_after_rate: true，star_path: '/images/ratyrate' %>
-      价格 : <%= rating_for @product, 'price', disable_after_rate: true，star_path: '/images/ratyrate' %>
-    </div>
+
   </div>
 </div>
 </div>

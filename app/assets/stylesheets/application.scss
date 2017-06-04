@@ -163,6 +163,33 @@ a:hover {
   }
 }
 
+/*「大按钮」和「小按钮」*/
+.g-btn {
+  display: block;
+  width: 178px;
+  height: 48px;
+  line-height: 45px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.s-btn {
+  display: block;
+  width: 84px;
+  height: 30px;
+  padding: 0px 0px;
+  line-height: 29px;
+  border: 1px solid #d32048;
+  font-family: "Microsoft Yahei",simhei;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.s-btn:hover, .g-btn:hover {
+  color: #fff;
+}
 
 /*===== 產品列表內容設置 以下为第二方案=====*/
 .product-content {

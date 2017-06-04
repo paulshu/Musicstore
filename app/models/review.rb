@@ -13,10 +13,10 @@
 #  price      :integer
 #
 
-require 'test_helper'
-
-class ReviewsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+class Review < ApplicationRecord
+  belongs_to :user
+  belongs_to :product
+  has_many :graphic
+  #accepts_nested_attributes_for :graphics
+  validates :content, presence: true
 end

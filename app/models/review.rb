@@ -14,9 +14,10 @@
 #
 
 class Review < ApplicationRecord
+  validates :content, presence: true
   belongs_to :user
   belongs_to :product
-  has_many :graphic
-  #accepts_nested_attributes_for :graphics
-  validates :content, presence: true
+  has_many :graphics
+  accepts_nested_attributes_for :graphics
+
 end

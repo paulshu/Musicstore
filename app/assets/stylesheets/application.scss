@@ -20,7 +20,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');//引入google思源黑简在线字体 需要使用VPN才可生效
+
 //footer always on the bottom
 
 html {
@@ -28,14 +29,10 @@ html {
   min-height: 100%;
 }
 
-// body {
-//   margin-bottom: 80px;
-// }
-
 /*每个页面都要用到的css*/
 body {
   color: #2E2E2E;
-  font-family: "Microsoft Yahei",verdana;
+  font-family: "Noto Sans SC",sans-serif;
   background: #FFFFFF;
   margin-bottom: 80px;
 }

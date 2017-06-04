@@ -5,64 +5,111 @@
 
 //***** 购物车效果 *****//
 
-.cartProducts-title {
-	height: 50px;
-	line-height: 50px;
-}
-.cartProducts-title-msg {
-	width: 425px;
-}
-.cartProducts-title-price {
-	width: 143px;
-}
-.cartProducts-title-quantity {
-	width: 280px;
-}
-.cartProducts-title-total {
-	width: 200px;
-}
-.cartProducts-title-operation {
-	width: 150px;
+// 整体样式
+.shopping-cart {
+  margin-top: 10px;
+	text-align: center;
+  }
+
+// 清空购物车按钮
+  .clean_carts {
+    padding-top: 20px;
+		font-size: 15px;
+  }
+
+// 列表表头样式
+.cart-column-head {
+  background: rgba(#817e7e, 0.94);
+  padding: 20px 0 20px 0;
+  margin-bottom: 20px;
+  color: #fff;
+  label {
+    text-align: center;
+    line-height: 4px;
+		font-size: 15px;
+  }
 }
 
-.cartProducts-listItem {
-	background: #FEFDED;
-	.item-pic {
-		img {
-			width: 72px;
-			height: 72px;
-		}
-	}
-	.item-msg {
-		padding-left: 20px;
-    padding-top: 10px;
-    width: 321px;
-    color: #808080;
-    font-size: 14px;
-		a {
-			color: #39f;
-		}
-	}
-	.item-price {
-		padding-top: 26px;
-    width: 143px;
-    color: #808080;
-    font-size: 14px;
-	}
-	.item-quantity {
-		padding-top: 22px;
-		width: 280px;
-	}
-	.item-total {
-		padding-top: 26px;
-    width: 200px;
-    color: #db3852;
-	}
-	.item-operation {
-		padding-top: 28px;
-		width: 150px;
-	}
+// 购物车商品
+.product-list {
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+  img {
+    height: auto;
+    width: 80px;
+  }
 }
+
+.product-title-cart {
+	text-align: center;
+}
+// 合计样式
+.product-price-total {
+  font-size: 2em;
+  color: #7f8c8d;
+  font-weight: lighter;
+}
+//
+// .cartProducts-title {
+// 	height: 50px;
+// 	line-height: 50px;
+// }
+// .cartProducts-title-msg {
+// 	width: 425px;
+// }
+// .cartProducts-title-price {
+// 	width: 143px;
+// }
+// .cartProducts-title-quantity {
+// 	width: 280px;
+// }
+// .cartProducts-title-total {
+// 	width: 200px;
+// }
+// .cartProducts-title-operation {
+// 	width: 150px;
+// }
+//
+// .cartProducts-listItem {
+// 	background: #FEFDED;
+// 	.item-pic {
+// 		img {
+// 			width: 72px;
+// 			height: 72px;
+// 		}
+// 	}
+// 	.item-msg {
+// 		padding-left: 20px;
+//     padding-top: 10px;
+//     width: 321px;
+//     color: #808080;
+//     font-size: 14px;
+// 		a {
+// 			color: #39f;
+// 		}
+// 	}
+// 	.item-price {
+// 		padding-top: 26px;
+//     width: 143px;
+//     color: #808080;
+//     font-size: 14px;
+// 	}
+// 	.item-quantity {
+// 		padding-top: 22px;
+// 		width: 280px;
+// 	}
+// 	.item-total {
+// 		padding-top: 26px;
+//     width: 200px;
+//     color: #db3852;
+// 	}
+// 	.item-operation {
+// 		padding-top: 28px;
+// 		width: 150px;
+// 	}
+// }
 
 
 //***** 购物车中产品数量修改 *****//

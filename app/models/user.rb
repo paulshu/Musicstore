@@ -66,6 +66,5 @@ class User < ApplicationRecord
     end
   end
 
-  ratyrate_rater
 
 end

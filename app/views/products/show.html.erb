@@ -170,7 +170,7 @@
               <%=  review.content  %><br>
               <% if review.graphics.present? %>
                 <% review.graphics.each_with_index do |review, index| %>
-                    <%= image_tag graphic.image.medium.url, class: "commentImage border" %>
+                    <%= image_tag review.image.medium.url, class: "commentImage border" %>
                 <% end %>
               <% end %>
               <br>
@@ -229,6 +229,15 @@
     path: '/images/',
     scoreName: 'review[price]'
   });
+
+  // 评论图片放大 //
+  $('.comment-image').click(function () {
+    if ($(this).hasClass('comment-image-scale')) {
+      $(this).removeClass('comment-image-scale')
+    } else {
+      $(this).addClass('comment-image-scale')
+    }
+  })
 </script>
 
 <div class="recommend col-gray w1200 mt20 mb20 bc ">

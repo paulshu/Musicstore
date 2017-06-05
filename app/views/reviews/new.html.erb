@@ -21,17 +21,12 @@
     </div>
 
     <div class="from-group">
-      <!-- <%= f.fields_for :graphics do |g| %> -->
-        <!-- <div class="field"> -->
-          <%= g.label :配图 %><br>
-          <!-- <%= g.file_field :image, :multiple => true, name: "graphics[image][]" %>
-        </div>
-        <% end %> -->
-
+      <%= f.label :配图 %><br>
       <%= f.file_field :image, :multiple => true, name: "graphics[image][]" %>
     </div>
+
     <div class="form-actions">
-      <%= f.submit "提交", disable_with: "Submiting...", class: "g-btn pl15 pr15 mt20 ml20 tc col-red f20 bg-red bc"%>
+      <%= f.submit "提交", disable_with: "Submiting...", class: "g-btn pl15 pr15 mt20 ml20 tc f20 bg-red bc"%>
     </div>
   <% end %>
 

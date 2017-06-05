@@ -25,18 +25,6 @@
         <label class="col-md-2 product-removal-cart">操作</label>
       </div>
 
-    <!-- <div class="panel panel-info" style="margin-top:60px;">
-      <div class="panel-heading" style="font-size:20px;background-color:white; color:#e4371f">购物车</div>
-      <table class="table table-hover table-bordered">
-        <thead >
-          <tr >
-            <th colspan="2" class="text-center">商品信息</th>
-            <th>单价</th>
-            <th>数量</th>
-            <th>小计（RMB）</th>
-            <th>操作</th>
-          </tr>
-        </thead> -->
 
         <!-- 列表购物车商品 -->
           <% current_cart.cart_items.each do |cart_item| %>
@@ -93,11 +81,11 @@
 
       <br>
 
-      <div class="checkout clearfix">
+      <div class="checkout mb50 clearfix">
         <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
       </div>
     </div>
-  <!-- </div> -->
+
 
 <% elsif %>
   <% if !current_user %>

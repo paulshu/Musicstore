@@ -71,7 +71,7 @@ Product.create!(
 )
 
 Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/301.jpg"))
-Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/302.jpg"))
+Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/302.png"))
 Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/303.jpg"))
 Photo.create!(product_id:3, image: open("#{Rails.root}/app/assets/images/products/product3/304.jpg"))
 
@@ -154,9 +154,9 @@ Product.create!(
 )
 
 Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/801.jpg"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/802.jpg"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/803.jpg"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/804.jpg"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/802.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/803.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/804.png"))
 
 
 Product.create!(
@@ -169,10 +169,10 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/d901.jpg") ##details
 )
 
-Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/901.jpg"))
-Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/902.jpg"))
-Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/903.jpg"))
-Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/904.jpg"))
+Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/901.png"))
+Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/902.png"))
+Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/903.png"))
+Photo.create!(product_id:9, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product9/904.png"))
 
 
 Product.create!(
@@ -185,13 +185,13 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/details10.png") ##details
 )
 
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1001.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1002.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1003.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1004.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1005.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1006.jpg"))
-Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1007.jpg"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1001.png"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1002.png"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1003.png"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1004.png"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1005.png"))
+Photo.create!(product_id:10, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product10/1006.png"))
+
 
 
 
@@ -222,10 +222,10 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/d1201.jpg") ##details
 )
 
-Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1201.jpg"))
-Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1202.jpg"))
-Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1203.jpg"))
-Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1204.jpg"))
+Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1201.png"))
+Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1202.png"))
+Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1203.png"))
+Photo.create!(product_id:12, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product12/1204.png"))
 
 
 
@@ -255,10 +255,10 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/d1401.jpg") ##details
 )
 
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1401.jpg"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1402.jpg"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1403.jpg"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1404.jpg"))
+Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1401.png"))
+Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1402.png"))
+Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1403.png"))
+Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1404.png"))
 
 
 
@@ -273,10 +273,10 @@ Product.create!(
 )
 
 Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1501.jpg"))
-Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1502.jpg"))
-Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1503.jpg"))
-Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1504.jpg"))
-Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1505.jpg"))
+Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1502.png"))
+Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1503.png"))
+Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1504.png"))
+Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product15/1505.png"))
 
 
 
@@ -291,10 +291,10 @@ Product.create!(
 )
 
 Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1601.jpg"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1602.jpg"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1603.jpg"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1604.jpg"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1605.jpg"))
+Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1602.png"))
+Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1603.png"))
+Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1604.png"))
+Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1605.png"))
 
 
 
@@ -308,10 +308,10 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/d1701.jpg") ##details
 )
 
-Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1701.jpg"))
-Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1702.jpg"))
-Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1703.jpg"))
-Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1704.jpg"))
+Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1701.png"))
+Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1702.png"))
+Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1703.png"))
+Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1704.png"))
 
 Product.create!(
   id: 18,
@@ -323,8 +323,8 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/details18.png") ##details
 )
 
-Photo.create!(product_id:18, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/1801.jpg"))
-Photo.create!(product_id:18, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/1802.jpg"))
+Photo.create!(product_id:18, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/1801.png"))
+Photo.create!(product_id:18, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product18/1802.png"))
 
 
 
@@ -338,9 +338,9 @@ Product.create!(
   image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/d1901.jpg") ##details
 )
 
-Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1901.jpg"))
-Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1902.jpg"))
-Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1903.jpg"))
+Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1901.png"))
+Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1902.png"))
+Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product19/1903.png"))
 
 
 
@@ -356,6 +356,5 @@ Product.create!(
 
 Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2001.jpg"))
 Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2002.jpg"))
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2003.jpg"))
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2004.jpg"))
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2005.jpg"))
+Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2004.png"))
+Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2005.png"))

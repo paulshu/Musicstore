@@ -47,6 +47,7 @@ gem 'seo_helper'
 gem 'rucaptcha'
 gem 'dalli'
 gem 'social-share-button'
+gem 'impressionist'
 
 
 

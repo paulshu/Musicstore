@@ -71,7 +71,7 @@
           <div class='intro-text-share'>
             <%= social_share_button_tag(@product.title, :allow_sites => %w(facebook twitter google_plus wechat weibo douban)) %>
           </div>
-          
+
        </p>
 
 
@@ -114,7 +114,7 @@
             largeWrapper: 'preview'
       })
     })
-    
+
     $('.intro-preview-activeItem').trigger('mouseover')
     $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
         $('#preview').css('visibility', 'visible')
@@ -169,8 +169,8 @@
             <p class="fl content tl f12">
               <%=  review.content  %><br>
               <% if review.graphics.present? %>
-                <% review.graphics.each_with_index do |product, index| %>
-                    <%= image_tag product.image.medium.url, class: "commentImage border" %>
+                <% review.graphics.each_with_index do |review, index| %>
+                    <%= image_tag graphic.image.medium.url, class: "commentImage border" %>
                 <% end %>
               <% end %>
               <br>

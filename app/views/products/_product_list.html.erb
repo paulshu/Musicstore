@@ -1,4 +1,4 @@
-<ul class="productList clearfix">
+<ul class="productList clearfix mb10 pb20">
   <% @products.each_with_index do |product, index| %>
 
     	<%= render :partial => "welcome/product_item", locals: { product: product, index: index } %>

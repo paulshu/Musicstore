@@ -80,17 +80,48 @@ a:hover {
 
 // navbar
 .navbar-default {
-    background-color: #F5F5F5;
+    background-color: #333333;
     margin-bottom: 0;
     border-radius: 0;
+    color: white;
 }
 
 .navbar-default .navbar-brand {
-    color: #f4621b;
-    padding: 10px 15px;
-    line-height: 30px;
+    color: white;
+    padding: 15px 15px;
+    line-height: 20px;
 }
 
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 12px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #f46f0f;
+}
+
+.dropdown-menu {
+  background-color: #333333;
+  min-width: 100px;
+}
+.dropdown-menu > li > a {
+  color: white;
+  font-size: 12px;
+}
+// .navbar-default .fixed_part {
+//   width: 100%;
+//   position: fixed;
+//   background-color:white;
+//   top: 0;
+//   left: 100px;
+//   right: 0;
+//   padding-top: 10px;
+//   z-index: 100;
+//   box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+//   border-bottom: 3px solid #ff5722;
+// }
 
 /*===== Product 產品  以下为第二方案=====*/
 .product-box {
@@ -146,7 +177,7 @@ a:hover {
 
 .products-search-form {   //调搜索框大小和位置
   margin-top: 9px;
-  padding-left: 20px;
+  padding-left: 200px;
   width: 290px;
   .search-bar {
     position: relative;
@@ -208,36 +239,36 @@ a:hover {
   min-height: 55px;
 }
 
-/*左侧导航栏*/
-.category_sidebar {
-  display: none;
-  position: fixed;
-  width: 36px;
-  background: #F6F9FA;
-  top: 50%;
-  left: 50%;
-  margin-left: -638px;
-  margin-top: -100px;
-  border-radius: 2px;
-}
-
-.category_sidebar a {
-  display: block;
-  width: 100%;
-  padding: 5px 0;
-  line-height: 18px;
-  border-bottom: 1px solid #DDDDDD;
-  -webkit-transition:all 0.1s ease-in-out;
-  -moz-transition:all 0.1s ease-in-out;
-  -o-transition:all 0.1s ease-in-out;
-  -ms-transition:all 0.1s ease-in-out;
-  transition:all 0.1s ease-in-out;
-}
-
-.category_sidebar a:hover {
-  color: #fff;
-  background: #D32048;
-}
+// /*左侧导航栏*/
+// .category_sidebar {
+//   display: none;
+//   position: fixed;
+//   width: 36px;
+//   background: #F6F9FA;
+//   top: 50%;
+//   left: 50%;
+//   margin-left: -638px;
+//   margin-top: -100px;
+//   border-radius: 2px;
+// }
+//
+// .category_sidebar a {
+//   display: block;
+//   width: 100%;
+//   padding: 5px 0;
+//   line-height: 18px;
+//   border-bottom: 1px solid #DDDDDD;
+//   -webkit-transition:all 0.1s ease-in-out;
+//   -moz-transition:all 0.1s ease-in-out;
+//   -o-transition:all 0.1s ease-in-out;
+//   -ms-transition:all 0.1s ease-in-out;
+//   transition:all 0.1s ease-in-out;
+// }
+//
+// .category_sidebar a:hover {
+//   color: #fff;
+//   background: #D32048;
+// }
 
 
 

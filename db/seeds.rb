@@ -38,7 +38,7 @@ Product.create!(
   description: "本款钢琴仍然采用德国优秀的防锈钢线,UP119QS采用新材料，新工艺进行限量生产，精细加工。",
   price: 4199,
   quantity: 105,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product1/d101.png")
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product1/uud101.png")
 )
 
 Photo.create!(product_id:1, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product1/101.jpg"))
@@ -147,17 +147,18 @@ Photo.create!(product_id:7, image: MiniMagick::Image.open("#{Rails.root}/app/ass
 Product.create!(
   id: 8,
   category_id: 2,
-  title: "TOM 高端ukulele 经典款23寸 尤克里里",
-  description: "欧洲精细做工,配备意大利正品aquila进口弦线，牛骨弦枕",
+  title: "Schecter BLACKJACK ATX C-5 电贝斯",
+  description: "整琴采用桃花心木制作，琴颈采用3片拼接设计,特殊的哑光漆面处理，低调的Aged Creme Multi-Ply 包边",
   price: 599,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/details08.png") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/ud800.jpg") ##details
 )
 
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/801.jpg"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/802.png"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/803.png"))
-Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/804.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/u801.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/u802.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/u803.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/u804.png"))
+Photo.create!(product_id:8, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product8/u805.png"))
 
 
 Product.create!(
@@ -203,7 +204,7 @@ Product.create!(
   description: "进口欧料精选独板纯手工收藏级小提琴，精品中的精品",
   price: 6480,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product11/d1101.jpg") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product11/d1101.png") ##details
 )
 
 Photo.create!(product_id:11, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product11/1101.jpg"))
@@ -253,13 +254,10 @@ Product.create!(
   description: "智能电鼓魔鲨成人专业电子鼓",
   price: 6380,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/d1401.jpg") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/ud1400.jpg") ##details
 )
 
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1401.png"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1402.png"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1403.png"))
-Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/1404.png"))
+Photo.create!(product_id:14, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product14/u1401.png"))
 
 
 
@@ -284,18 +282,14 @@ Photo.create!(product_id:15, image: MiniMagick::Image.open("#{Rails.root}/app/as
 Product.create!(
   id: 16,
   category_id: 2,
-  title: "YAMAHA 雅马哈 古典吉他 CG122MC(原木色)",
-  description: "饱满的共鸣、优秀的演奏性、明快的外观，集众多魅力与一身的新CG系列",
-  price: 1650,
+  title: "Cort 考特 AD810 OP 民谣吉他 哑光原色",
+  description: "专为即将拥有吉他的朋友而设计的，价格适中，做工优质",
+  price: 999,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/details16.png") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/ud1600.jpg") ##details
 )
 
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1601.jpg"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1602.png"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1603.png"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1604.png"))
-Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/1605.png"))
+Photo.create!(product_id:16, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product16/u1601.jpg"))
 
 
 
@@ -306,7 +300,7 @@ Product.create!(
   description: "完美的音色、震撼的共鸣效果和操控自如的弹奏舒适感",
   price: 4280,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/d1701.jpg") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/ud1701.png") ##details
 )
 
 Photo.create!(product_id:17, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product17/1701.png"))
@@ -347,15 +341,15 @@ Photo.create!(product_id:19, image: MiniMagick::Image.open("#{Rails.root}/app/as
 
 Product.create!(
   id: 20,
-  category_id: 4,
-  title: "红棉大提琴 C038 手工大提琴",
-  description: "大提琴乐器 (C038 4/4)",
+  category_id: 3,
+  title: "HiVi 惠威 X5 2.0专业有源监听音箱",
+  description: "专业监听全有源电子滤波电路，单元配置20mm金属硬球顶高音,5.25英寸长冲程盆碗形低音",
   price: 3080,
   quantity: 10001,
-  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/d2001.jpg") ##details
+  image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/ud2000.jpg") ##details
 )
 
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2001.jpg"))
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2002.jpg"))
+Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2001.png"))
+Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2002.png"))
+Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2003.png"))
 Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2004.png"))
-Photo.create!(product_id:20, image: MiniMagick::Image.open("#{Rails.root}/app/assets/images/products/product20/2005.png"))

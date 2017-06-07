@@ -71,12 +71,7 @@
           <div class='intro-text-share'>
             <%= social_share_button_tag(@product.title, :allow_sites => %w(facebook twitter google_plus wechat weibo douban)) %>
           </div>
-
        </p>
-
-
-
-
         <p class="intro-text-btnWrap">
           <% if @product.quantity.present? && @product.quantity > 0 %>
               <%= link_to("加入购物车", add_to_cart_product_path(@product),
@@ -91,16 +86,6 @@
     </div>
 
     <script>
-    // 放大镜 //
-    $('#preview').css('visibility', 'hidden')
-    var evt = new Event(),
-        m = new Magnifier(evt);
-    m.attach({
-        thumb: '#thumb',
-        large: $('.intro-preview-activeItem img').attr('src'),
-        largeWrapper: 'preview',
-        zoom: 2
-    })
 
     // 预览图选择  //
     $(document).on('mouseover', '.intro-preview-item', function () {
@@ -191,6 +176,28 @@
 </div>
 </div>
 <script>
+// 评论图片放大 //
+$('.comment-image').click(function () {
+  if ($(this).hasClass('comment-image-scale')) {
+    $(this).removeClass('comment-image-scale')
+  } else {
+    $(this).addClass('comment-image-scale')
+  }
+})
+
+// 评论图选择
+$('.commentImage').click(function () {
+  if ($(this).hasClass('selected')) {
+    $(this).parent().find('.commentBigImage').hide()
+    $(this).removeClass('selected')
+    return false
+  }
+  $(this).addClass('selected').siblings().removeClass('selected')
+
+  $(this).parent().find('.commentBigImage').attr('src', $(this).attr('src')).fadeIn()
+})
+
+
   $('.star-look').raty({
     path: '/images/',
       readOnly: true,

@@ -89,6 +89,18 @@ $('.comment-image').click(function () {
   }
 })
 
+// 评论图选择
+$('.commentImage').click(function () {
+  if ($(this).hasClass('selected')) {
+    $(this).parent().find('.commentBigImage').hide()
+    $(this).removeClass('selected')
+    return false
+  }
+  $(this).addClass('selected').siblings().removeClass('selected')
+
+  $(this).parent().find('.commentBigImage').attr('src', $(this).attr('src')).fadeIn()
+})
+
 // 投票 //
 $('.star-look').raty({
   path: '/images/',

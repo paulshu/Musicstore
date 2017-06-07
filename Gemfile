@@ -48,6 +48,7 @@ gem 'rucaptcha'
 gem 'dalli'
 gem 'social-share-button'
 gem 'impressionist'
+gem 'devise-i18n'
 
 
 
@@ -69,9 +70,10 @@ group :development do
   # gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -52,11 +52,11 @@ var $lp_navbar = $('.lp-navbar')
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 500) {
-    $sidebar.fadeIn()
-    $category_sidebar.fadeIn() // 慢慢地显示侧边栏
+    $(".sidebar").fadeIn()
+    $(".category_sidebar").fadeIn() // 慢慢地显示侧边栏
   } else {
-    $sidebar.fadeOut()
-    $category_sidebar.fadeOut() // 慢慢地隐藏侧边栏
+    $(".sidebar").fadeOut()
+    $(".category_sidebar").fadeOut() // 慢慢地隐藏侧边栏
   }
 
   if ($(this).scrollTop() > 120) {
@@ -168,47 +168,4 @@ $(document).on('mouseover', '.magnifier-thumb-wrapper', function (e) {
 })
 $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
     $('#preview').css('visibility', 'hidden')
-})
-
-
-
-
-/* carousel effect  */
-
-// $('.carousel').carousel()
-
-/* scroll effect  */
-(function ($) {
-  $(document).ready(function(){
-    $('.index').hide();
-    $(function () {
-        $(window).scroll(function () {
-
-            if ($(this).scrollTop() > 1000) {
-                $('.index').fadeIn();
-            } else {
-                $('.index').fadeOut();
-            }
-        });
-    });
-
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $('.animated').fadeOut();
-            } else {
-                $('.animated').fadeIn();
-            }
-        });
-    });
-
-});
-  }(jQuery));
-
-
-
-/* index effect */
-
-$(document).on('click', '.index', function () {
-  $('body').animate({'scrollTop': 0}, 700)
 })

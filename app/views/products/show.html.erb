@@ -229,15 +229,6 @@
     path: '/images/',
     scoreName: 'review[price]'
   });
-
-  // 评论图片放大 //
-  $('.comment-image').click(function () {
-    if ($(this).hasClass('comment-image-scale')) {
-      $(this).removeClass('comment-image-scale')
-    } else {
-      $(this).addClass('comment-image-scale')
-    }
-  })
 </script>
 
 <div class="recommend col-gray w1200 mt20 mb20 bc ">
@@ -273,6 +264,6 @@
 </div>
 
 <!-- 页面到底部返回 -->
-<div class="index">
-   <i class="fa fa-arrow-up"></i>
+<div class="sidebar">
+   <a class="backtop" href="javascript:;"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
 </div>

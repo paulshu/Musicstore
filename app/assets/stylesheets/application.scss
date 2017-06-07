@@ -103,25 +103,32 @@ a:hover {
 }
 
 .dropdown-menu {
-  background-color: #333333;
-  min-width: 100px;
+  background-color: #E7E7E7;
+  min-width: 91px;
 }
 .dropdown-menu > li > a {
-  color: white;
+  // color: white;
   font-size: 12px;
+  padding-left: 13px;
 }
-// .navbar-default .fixed_part {
-//   width: 100%;
-//   position: fixed;
-//   background-color:white;
-//   top: 0;
-//   left: 100px;
-//   right: 0;
-//   padding-top: 10px;
-//   z-index: 100;
-//   box-shadow: rgba(0,0,0,.1) 0 1px 5px;
-//   border-bottom: 3px solid #ff5722;
-// }
+
+.navbar-brand > img {
+    display: inline-block; //图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 26px; //定制图片宽度
+    height: 26px; //定制图片高度
+}
+
+//设置头像大小
+
+.thumbnail_avatar {
+ border-radius:50%;
+ width:30px;
+ height:30px;
+ padding:1px;
+ margin-top:10px;
+ margin-bottom: 2px;
+}
 
 /*===== Product 產品  以下为第二方案=====*/
 .product-box {
@@ -173,24 +180,6 @@ a:hover {
   }
 }
 
-/*  SEARCH-BAR */
-
-.products-search-form {   //调搜索框大小和位置
-  margin-top: 9px;
-  padding-left: 200px;
-  width: 290px;
-  .search-bar {
-    position: relative;
-    margin-top: 10px;
-    display: inline-block;
-    padding-right: 40px;
-
-  .search-bar-input  {
-    min-width: 300px;
-    transition: 0.35s;
-    }
-  }
-}
 
 /*「大按钮」和「小按钮」*/
 .g-btn {
@@ -292,7 +281,47 @@ a:hover {
   display: none;
 }
 
-/*左侧导航栏*/
+
+
+/*  SEARCH-BAR */
+
+.products-search-form {   //调搜索框大小和位置
+  margin-left: 270px;
+  width: 400px;
+  border-color: red;
+  .search-bar {
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    padding-right: 40px;
+
+  .search-bar-input  {
+    min-width: 300px;
+    transition: 0.35s;
+    }
+  }
+}
+
+//设置购物车
+.cart {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  border: 1px solid #DFDFDF;
+  margin-left: 40px;
+}
+.cart-wrap {
+  width: 160px;
+  top: 0;
+  right: 0px;
+}
+.cart-wrap:hover .cart {
+  border-bottom: none;
+  background: #fff;
+}
+
+
+// /*左侧导航栏*/
 .category_sidebar {
   display: none;
   position: fixed;
@@ -324,7 +353,7 @@ a:hover {
 }
 
 
-/*右侧边栏 */
+/*右侧边栏 暂时没有*/
 .sidebar {
   display: none;
   position: fixed;
@@ -418,11 +447,3 @@ a:hover {
 .col-blue {
   color: #005AA0;
 }
-
-//设置logo大小
- .navbar-brand > img {
-     display: inline-block; //图片和链接文字显示在同一行
-     margin-right: 10px; //图片和链接文字拉开一点距离
-     width: 26px; //定制图片宽度
-     height: 26px; //定制图片高度
- }

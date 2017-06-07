@@ -1,3 +1,17 @@
+<!-- <div class="header_placeholder h50"></div> -->
+<div class="header">
+  <div class="w1200 clearfix bc mt30 pb20 header_content pr">
+    <div class="logo fl f24"><%=link_to("MusicStore", products_path, class: "col-red")%></div>
+    <div class="fl mt8">
+      <%= render :partial => "products/search_bar" %>
+    </div>
+    <div class="pa mt8 cart-wrap">
+      <%= render :partial => "products/cart" %>
+    </div>
+  </div>
+</div>
+
+
 <div class="minHeight1000 lp-bg-gray">
   <div class="banner tc pt30 w1200 bc">
     <div id="myCarousel" class="carousel slide">

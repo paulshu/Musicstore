@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
@@ -26,6 +26,12 @@
 //= require Magnifier
 //= require jquery.raty
 //= require_tree .
+
+
+ // 测试
+$(document).ready(function(){
+  alert("test!");
+})
 
 // 首页轮播
 $(document).ready(function() {
@@ -211,4 +217,30 @@ $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
 
 $(document).on('click', '.index', function () {
   $('body').animate({'scrollTop': 0}, 700)
+})
+
+
+/* search bar fixed */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      alert("you are right")
+      if ($('.header').is(':animated')) {
+        return false;
+      }
+      $('.header').addClass('header_fixed'); // 让导航栏固定在顶部
+      $('.header').stop().animate({top: 0}, 600); // 在600ms内，慢慢地出来
+    } else {
+      $('.header').removeClass('header_fixed');
+      $('.header').css({top: -80});
+    }
+  }
+  });
+
+//for test
+$(window).on('scroll', function () {
+            alert("scrolling");
+          })
+
+$(document).ready(function(){
+  alert("test!");
 })

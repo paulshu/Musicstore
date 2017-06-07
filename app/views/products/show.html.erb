@@ -98,6 +98,16 @@
     </div>
 
     <script>
+    // 放大镜 //
+    $('#preview').css('visibility', 'hidden')
+    var evt = new Event(),
+        m = new Magnifier(evt);
+    m.attach({
+        thumb: '#thumb',
+        large: $('.intro-preview-activeItem img').attr('src'),
+        largeWrapper: 'preview',
+        zoom: 2
+    })
 
     // 预览图选择  //
     $(document).on('mouseover', '.intro-preview-item', function () {

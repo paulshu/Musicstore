@@ -28,9 +28,18 @@
 //= require_tree .
 
 
- // 测试
-$(document).ready(function(){
-  alert("test!");
+/* search bar fixed */
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 80) {
+      if ($('.header').is(':animated')) {
+        return false;
+      }
+      $('.header').addClass('header_fixed'); // 让导航栏固定在顶部
+      $('.header').stop().animate({top: 0}, 600); // 在600ms内，慢慢地出来
+    } else {
+      $('.header').removeClass('header_fixed');
+      $('.header').css({top: -80});
+  }
 })
 
 // 首页轮播
@@ -38,6 +47,7 @@ $(document).ready(function() {
     $('#myCarousel').carousel({interval: 4000})
     $(window).trigger('scroll') // 一开始就触发一下滚动事件
 });
+
 
 // 点击事件
 $(document).on('click', '.backtop', function () {
@@ -217,30 +227,4 @@ $(document).on('mouseout', '.magnifier-thumb-wrapper', function (e) {
 
 $(document).on('click', '.index', function () {
   $('body').animate({'scrollTop': 0}, 700)
-})
-
-
-/* search bar fixed */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      alert("you are right")
-      if ($('.header').is(':animated')) {
-        return false;
-      }
-      $('.header').addClass('header_fixed'); // 让导航栏固定在顶部
-      $('.header').stop().animate({top: 0}, 600); // 在600ms内，慢慢地出来
-    } else {
-      $('.header').removeClass('header_fixed');
-      $('.header').css({top: -80});
-    }
-  }
-  });
-
-//for test
-$(window).on('scroll', function () {
-            alert("scrolling");
-          })
-
-$(document).ready(function(){
-  alert("test!");
 })

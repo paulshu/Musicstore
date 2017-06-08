@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     resources :users       #修改及显示用户名
   end
 
-  root 'welcome#index'
+  root 'music#index'
 
 
   resources :products do

@@ -42,6 +42,13 @@ $(window).on('scroll', function () {
   }
 })
 
+// 首页轮播landingpage
+$(document).ready(function() {
+    $('#myCarousel1').carousel({interval: 3000})
+    $(window).trigger('scroll') // 一开始就触发一下滚动事件
+});
+
+
 // 首页轮播
 $(document).ready(function() {
     $('#myCarousel').carousel({interval: 4000})

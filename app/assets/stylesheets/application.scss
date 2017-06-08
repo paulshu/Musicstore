@@ -61,7 +61,8 @@ a:hover {
 
 /*footer*/
 .footer {
-  background: #333333;
+  // background: #333333;
+  background: linear-gradient(to top, #1CB5E0, #000046);
   padding: 16px 10px 6px;
   text-align: center;
   position: absolute;
@@ -80,7 +81,8 @@ a:hover {
 
 // navbar
 .navbar-default {
-    background-color: #333333;
+    // background-color: #333333;
+    background: linear-gradient(to top, #1CB5E0, #000046);
     margin-bottom: 0;
     border-radius: 0;
     color: white;

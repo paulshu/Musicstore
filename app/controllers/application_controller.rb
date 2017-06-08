@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
   private
 
   def find_cart
-    cart = Cart.find_by(id: session[:cart_id])
+    cart = Cart.find_by(id: session[:update_cart_id])
     if cart.blank?
       cart = Cart.create
     end
-    session[:cart_id] = cart.id
+    session[:update_cart_id] = cart.id
     return cart
   end
   # 加用户头像的定义，用devise需要这样写， 此行暂时没有，没弄清楚

@@ -277,6 +277,21 @@
   height: 375px;
 }
 
+//轮播图的caption1
+.carousel-caption {
+  margin-bottom: -250px;
+}
+.caption1{
+  h1 {
+    margin-bottom:30px;
+
+  }
+  p {
+    font-size:20px;
+    margin-bottom:20px;
+  }
+}
+
 /*排序*/
 .order {
   background: #fff;
@@ -293,18 +308,6 @@
 }
 .orderList-activeItem a {
   color: #d32048;
-}
-
-//轮播图的caption1
-.caption1{
-  h1 {
-    margin-bottom:30px;
-
-  }
-  p {
-    font-size:20px;
-    margin-bottom:20px;
-  }
 }
 
 

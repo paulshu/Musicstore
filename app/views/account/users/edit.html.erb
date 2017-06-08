@@ -7,9 +7,11 @@
         <div>
           <%= f.input :name, :label =>"用户名" %>
           <%= f.input :email, :label =>"邮箱地址" %>
-          <%= link_to("放弃更新", account_users_path, class: "btn btn-sm btn-info" ) %>
+          <%= f.input :phonenumber, :label =>"手机号码" %>
+          <%= f.input :address, :label =>"收件人地址" %>
           <%= f.input :avatar, as: :file ,label:"头像"%>
           <%= f.submit "提交", class: "btn btn-sm btn-danger" %>
+          <%= link_to("放弃更新", account_users_path, class: "btn btn-sm btn-info" ) %>
         </div>
       <% end %>
     </div>

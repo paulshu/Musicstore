@@ -141,6 +141,8 @@ ActiveRecord::Schema.define(version: 20170604125003) do
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
     t.string   "name"
+    t.string   "phonenumber"
+    t.string   "address"
     t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -17,6 +17,8 @@
 #  updated_at             :datetime         not null
 #  is_admin               :boolean          default(FALSE)
 #  name                   :string
+#  phonenumber            :string
+#  address                :string
 #  avatar                 :string
 #
 # Indexes

@@ -311,14 +311,15 @@ a:hover {
   cursor: pointer;
   border: 1px solid #DFDFDF;
   margin-left: 40px;
+  border-radius: 2px;
 }
 .cart-wrap {
-  width: 160px;
+  width: 180px;
   top: 0;
   right: 0px;
 }
 .cart-wrap:hover .cart {
-  border-bottom: none;
+  // border-bottom: none;
   background: #fff;
 }
 

@@ -8,8 +8,12 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    @order = Order.new
-    @cart_item = current_cart.cart_items.find_by_product_id(params[:id])
+    if !current_user.blank?
+      @order = Order.new
+      @cart_item = current_cart.cart_items.find_by_product_id(params[:id])
+    else
+      render 'devise/sessions/new'  # 如果用户未登录，需确认结帐时，则转到登录界面
+    end
   end
 
   def cart_item_params

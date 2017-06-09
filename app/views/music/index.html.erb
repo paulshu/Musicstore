@@ -1,6 +1,7 @@
 <div class="world">
-    <audio class="music" src="Eutopia.mp3" autoplay controls loop hidden>
-    </audio>
+  <a id="btn-music" class="btn-music"></a>
+  <audio class="music" src="Eutopia.mp3" autoplay controls loop hidden>
+  </audio>
 
   <!-- <div id="carouselExampleControls" class="clearfix carousel slide" data-ride="carousel"> -->
   <div class="banner-m tc pt30 w1200 bc">
@@ -44,3 +45,17 @@
     <div>
 
 </div>
+
+
+<script type="text/javascript">
+
+let playMusic = true;
+
+document.getElementById("btn-music").addEventListener("click", function() {
+  playMusic = !playMusic;
+  document.getElementById("btn-music").classList.toggle('music-off');
+  playMusic ? document.querySelector('.music').play() : document.querySelector('.music').pause();
+  });
+
+  worldMusic.volume = 0.8;//预设音量
+  </script>

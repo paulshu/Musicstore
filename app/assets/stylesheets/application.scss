@@ -105,13 +105,17 @@ a:hover {
 }
 
 .dropdown-menu {
-  background-color: #E7E7E7;
+  background-color: white;
   min-width: 91px;
 }
 .dropdown-menu > li > a {
   // color: white;
   font-size: 12px;
   padding-left: 13px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+  background-color: white;
 }
 
 .navbar-brand > img {

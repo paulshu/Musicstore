@@ -26,7 +26,7 @@
 //= require Magnifier
 //= require jquery.raty
 //= require jquery.fly.min
-//= require jquery.turbolinks
+
 //= require_tree .
 
 

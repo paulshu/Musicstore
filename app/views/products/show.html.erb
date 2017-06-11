@@ -85,14 +85,7 @@
           </div>
        </p>
         <p class="intro-text-btnWrap">
-          <% if @product.quantity.present? && @product.quantity > 0 %>
-              <%= link_to("加入购物车", add_to_cart_product_path(@product),
-                  :method => :post,
-                  # :remote => true, 功能说明https://stackoverflow.com/questions/20737026/how-remote-true-works-in-rails
-                  :class => "intro-text-btn addCartBtn add-cart pl15 pr15 mt30 ml20 tc col-red f20 bg-red") %>
-          <% else %>
-            <a href="javascript:;" class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red btn-disabled">已售完</a>
-          <% end %>
+           <%= render :partial => "products/cart_btn"%>
         </p>
       </div>
     </div>
@@ -296,3 +289,31 @@ $('.commentImage').click(function () {
 <div class="sidebar">
    <a class="backtop" href="javascript:;"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
 </div>
+
+<!-- 购物车效果 -->
+<script  type="text/javascript">
+$(function() {
+    var offset = $("#end").offset();
+    $(".addCartBtn").click(function(event){
+        var addcar = $(this);
+        var img = addcar.closest('.productList-item').find('.productList-item-pic img').attr('src');
+        if (!img) img = $('#thumb').attr('src');
+        var flyer = $('<img class="u-flyer" src="'+img+'">');
+        flyer.fly({
+            start: {
+                left: event.pageX - 20, //开始位置（必填）#fly元素会被设置成position: fixed
+                top: event.clientY - 20 //开始位置（必填）
+            },
+            end: {
+                left: $('.fa-shopping-cart').offset().left, //结束位置（必填）
+                top: $('.fa-shopping-cart').offset().top - $(window).scrollTop(), //结束位置（必填）
+                width: 10, //结束时宽度
+                height: 10 //结束时高度
+            },
+            onEnd: function(){ //结束回调
+                this.destory(); //移除dom
+            }
+        });
+    });
+});
+</script>

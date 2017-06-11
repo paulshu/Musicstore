@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :authenticate_user!, only: [:favorite, :unfavorite]
   impressionist :actions=>[:show, :index]
+  respond_to :js
 
   def index
     if params[:category].blank?
@@ -46,7 +47,10 @@ class ProductsController < ApplicationController
     else
       flash[:warning] ="你的购物车已有此物品"
     end
-    redirect_to :back
+    # redirect_to :back
+    respond_to do |format|
+      format.js {render :layout => false}
+    end
   end
 
   # --调整商品购买的数量 --
@@ -55,7 +59,10 @@ class ProductsController < ApplicationController
     if @product.buying_quantity <= @product.quantity
       @product.buying_quantity +=1
       @product.save
-       redirect_to :back
+      #  redirect_to :back
+      respond_to do |format|
+        format.js {render :layout => false}
+      end
     end
   end
 

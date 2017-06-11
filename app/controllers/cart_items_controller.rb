@@ -1,5 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :authenticate_user!
+  respond_to :js
 
   def update
     @cart = current_cart

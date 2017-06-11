@@ -1,5 +1,5 @@
 <div class="cart bg-gray f12 pl20 pr20 pa">
 <%=  link_to carts_path do %>
-  <i class="fa fa-shopping-cart col-red mr5 tc"> </i>购物车 <span class="col-red"><%= current_cart.products.count %> </span>
+  <i class="fa fa-shopping-cart col-red mr5 tc"> </i>购物车 <span class="products_count col-red"><%= current_cart.products.count %> </span>
 <% end %>
 </div>

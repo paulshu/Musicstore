@@ -49,7 +49,7 @@ gem 'dalli'
 gem 'social-share-button'
 gem 'impressionist'
 gem 'devise-i18n'
-
+gem 'jquery-turbolinks'
 
 
 

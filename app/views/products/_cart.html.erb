@@ -1,6 +1,6 @@
 <div class="cart bg-gray f12 pl20 pr20 pa">
 <%=  link_to carts_path do %>
-  <i class="fa fa-shopping-cart col-red mr5 tc"> </i>购物车 <span class="products_count col-red"><%= current_cart.products.count %> </span>
+  <i class="fa fa-shopping-cart col-red mr5 tc"> </i>购物车 <span class="col-red"><%= current_cart.products.count %> </span>
 <% end %>
 </div>
 
@@ -27,7 +27,7 @@
 		<% end %>
 		<div class="bottom bg-gray p10 clearfix">
 			<p class="info fl f12 tr">合计 ￥<%= render_cart_total_price(current_cart) %></p>
-			<%= link_to("确认结账", checkout_carts_path, class: "s-btn add-cart pl15 pr15 ml20 tc f12 bg-red fr") %>
+			<%= link_to("确认结账", checkout_carts_path, method: :post, class: "s-btn add-cart pl15 pr15 ml20 tc f12 bg-red fr") %>
 		</div>
 	<% else %>
 		<p class="empty-message fs pt10 tc f12">购物车还没有商品，赶紧添加吧</p>

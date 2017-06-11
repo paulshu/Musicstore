@@ -21,8 +21,11 @@ class CartItemsController < ApplicationController
     @cart_item.destroy
     @product.quantity += @product.buying_quantity
     @product.save
-    flash[:warning] = "成功将 #{@product.title} 从购物车删除！"
-    redirect_to :back
+    # flash[:warning] = "成功将 #{@product.title} 从购物车删除！"
+    # redirect_to :back
+    respond_to do |format|
+      format.js   { render :layout => false }
+    end
   end
 
 

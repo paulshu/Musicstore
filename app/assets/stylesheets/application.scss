@@ -327,6 +327,9 @@ a:hover {
   background: #fff;
 }
 
+.cart-wrap:hover .previewProductsList {
+  display: block;
+}
 
 // /*左侧导航栏*/
 .category_sidebar {
@@ -453,4 +456,59 @@ a:hover {
 }
 .col-blue {
   color: #005AA0;
+}
+
+/*购物车预览*/
+.previewProductsList {
+  display: none;
+  width: 325px;
+  top: 33px;
+  left: -175px;
+  z-index: 9;
+  background: #fff;
+  max-height: 570px;
+  overflow: auto;
+}
+
+.previewProductsList .info {
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+.previewProductsList-item {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.previewProductsList-item-image {
+  width: 54px;
+  height: 54px;
+  img {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.previewProductsList-item-title {
+  color: #808080;
+  width: 135px;
+}
+
+.previewProductsList-item-info p {
+  margin-bottom: 0;
+}
+
+.previewProductsList-item-info .delete-btn {
+  color: #808080;
+}
+
+.previewProductsList-item-info .delete-btn:hover {
+  color: #D32048;
+}
+
+.empty-message {
+  color: #808080;
+  padding: 10px 0 10px;
+  margin: 0;
+  line-height: 1;
+  background: #fff;
 }
